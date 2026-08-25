@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "DokoSoko — Make your product one prompt away",
   description:
-    "Publish one versioned connector with exact product knowledge, compatible package metadata, and policy-bound setup actions for coding agents.",
+    "Give coding agents one authenticated path through the exact product knowledge, packages, APIs, and setup policy you publish.",
   icons: { icon: "./favicon.svg" },
   openGraph: {
     title: "DokoSoko — Make your product one prompt away",
     description:
-      "One versioned connector from developer intent to exact guidance, policy-bound setup, and a verifiable integration outcome.",
+      "One authenticated integration path from exact product knowledge to a recorded outcome.",
     type: "website",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "DokoSoko — Make your product one prompt away",
-    description: "One versioned connector from developer intent to exact guidance, policy-bound setup, and a verifiable integration outcome.",
+    description: "One authenticated integration path from exact product knowledge to a recorded outcome.",
     images: ["og.png"],
   },
 };
