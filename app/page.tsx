@@ -1,23 +1,60 @@
+import FlowParticle from "./flow-particle";
+
 const docsUrl = "/dokosoko-docs/";
-const quickstartUrl = `${docsUrl}getting-started/quickstart/`;
+const productSetupUrl = `${docsUrl}guides/product-setup/`;
 const securityUrl = `${docsUrl}concepts/security/`;
+const architectureUrl = `${docsUrl}concepts/architecture/`;
 const githubUrl = "https://github.com/Dokosoko/dokosoko-service";
 
-const integrationSteps = [
-  ["Recipe selected", "Next.js App Router · revision 7"],
-  ["Package resolved", "@vendor/nextjs-auth@4.2.1"],
-  ["Application created", "Scoped setup tool"],
-  ["Credential issued", "Development · short-lived"],
-  ["Integration validated", "Callback and session checks passed"],
+const integrationSurfaces = ["Docs", "APIs", "SDKs", "Packages", "Recipes"];
+
+const codingAgents = [
+  { name: "Claude", icon: "./agents/claude.svg" },
+  { name: "Codex", icon: "./agents/codex.png" },
+  { name: "Cursor", icon: "./agents/cursor.svg" },
+  { name: "OpenCode", icon: "./agents/opencode.svg" },
 ];
 
-const standards = ["Reviewed docs", "Evidence-grounded recipes", "Exact package releases", "Scoped setup tools", "Validated runs"];
+const workflowStages = [
+  {
+    index: "01",
+    verb: "Bind",
+    title: "Publish one exact integration snapshot.",
+    copy: "Bind reviewed product knowledge, API contracts, package metadata, tools, authorization, and delivery configuration to the Integration revision they actually support.",
+    items: ["Reviewed inputs", "Exact revisions", "Immutable manifest"],
+    output: "integration r18 · sha256:18b7…",
+  },
+  {
+    index: "02",
+    verb: "Resolve",
+    title: "Give the agent one compatible path.",
+    copy: "DokoSoko resolves the effective product version, then exposes its exact manifest, compatible package metadata, bound knowledge and tools, and current evidence-grounded recipes.",
+    items: ["Installation-aware", "Evidence-grounded", "No floating latest"],
+    output: "recipe r7 · package 4.2.1",
+  },
+  {
+    index: "03",
+    verb: "Act",
+    title: "Connect code work to bounded setup.",
+    copy: "The coding agent changes the repository while DokoSoko authorizes fixed provider operations with closed schemas, grants, and confirmation.",
+    items: ["Agent writes code", "Fixed destinations", "One-time return if issued"],
+    output: "code branch + provider branch",
+  },
+  {
+    index: "04",
+    verb: "Verify",
+    title: "Finish at an observed outcome.",
+    copy: "External checks verify the requested outcome, and DokoSoko records the run as validated or failed instead of treating generated files as success.",
+    items: ["MCP checked", "External outcome checked", "Run closed"],
+    output: "validated · or failed",
+  },
+];
 
-const boundaries = [
-  ["Scoped setup", "Fixed destinations, closed schemas, live grants, and explicit confirmation bound every setup action."],
-  ["Temporary credentials", "Provider-issued credentials are returned once; persistent vendor secrets remain server-side."],
-  ["Version integrity", "Exact releases stay pinned, and changed evidence or schema drift forces review before reuse."],
-  ["Operational evidence", "Preflight checks, integration runs, policy decisions, and outcomes remain distinct records."],
+const guardrails = [
+  ["01", "Published revision?", "Drafts remain invisible"],
+  ["02", "Grant valid?", "Customer state checked live"],
+  ["03", "Destination fixed?", "No request-time host choice"],
+  ["04", "Schema closed?", "Input and output validated"],
 ];
 
 function Brand({ compact = false }: { compact?: boolean }) {
@@ -35,109 +72,151 @@ function Arrow() {
   return <span className="arrow" aria-hidden="true">↗</span>;
 }
 
-function AgentIntegrationPreview() {
+function ConnectorSpinePreview() {
   return (
-    <figure className="agent-preview">
-      <div className="agent-window" aria-hidden="true">
-        <div className="agent-topbar">
-          <span><Brand compact /> <i /> Identity Platform connector</span>
-          <code>Stateless MCPv2 · connected</code>
-        </div>
-        <div className="agent-workspace">
-          <div className="agent-thread">
-            <span className="preview-label">CODING AGENT</span>
-            <div className="prompt-bubble">
-              <span>YOU</span>
-              <p>Add enterprise login to this Next.js app.</p>
-            </div>
-            <div className="connector-message">
-              <div className="connector-avatar">D</div>
-              <div>
-                <span>DokoSoko</span>
-                <p>I found the compatible integration path for this project.</p>
+    <figure className="connector-hero">
+      <div className="connector-diagram" aria-hidden="true">
+        <div className="source-network">
+          <div className="stack-sources">
+            {integrationSurfaces.map((surface) => (
+              <div className="source-pill" key={surface}>
+                <strong>{surface}</strong>
               </div>
-            </div>
-            <div className="agent-steps">
-              {integrationSteps.map(([label, detail]) => (
-                <div className="agent-step" key={label}>
-                  <i>✓</i>
-                  <span><strong>{label}</strong><small>{detail}</small></span>
-                </div>
-              ))}
-            </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flow-link" />
+
+        <div className="mcp-row">
+          <div className="credential-branch">
+            <span className="credential-lock">
+              {/* Lucide's lock-keyhole mark, stored locally for the static site. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="./lock-keyhole.svg" alt="" width="18" height="18" />
+            </span>
           </div>
 
-          <div className="integration-result">
-            <div className="result-heading">
-              <span><small>INTEGRATION PLAN</small><strong>Enterprise login · Next.js</strong></span>
-              <b>Resolved</b>
-            </div>
-            <div className="result-context">
-              <span><small>RECIPE</small><strong>Next.js App Router</strong><code>revision 7</code></span>
-              <span><small>PRODUCT</small><strong>Identity Platform</strong><code>API v4 · Latest</code></span>
-            </div>
-            <div className="result-code">
-              <div><span /><span /><span /><b>app/auth.ts</b></div>
-              <pre><code><em>import</em> {`{ AuthClient }`} <em>from</em>{"\n"}  <span>&quot;@vendor/nextjs-auth&quot;</span>{"\n\n"}<em>export const</em> auth = <em>new</em> AuthClient({`{`}{"\n"}  domain: process.env.AUTH_DOMAIN,{"\n"}{`}`});</code></pre>
-            </div>
-            <div className="changed-files">
-              <span><i>+</i> app/auth.ts</span><span><i>+</i> middleware.ts</span><span><i>+</i> .env.local</span>
-            </div>
-            <div className="result-ready"><span><i /> Integration ready</span><strong>3 files · setup validated</strong></div>
+          <div className="mcp-node">
+            {/* The official MCP mark is a tiny local static asset. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./mcp.svg" alt="" width="32" height="32" />
+            <strong>DokoSoko MCP</strong>
           </div>
         </div>
+
+        <div className="flow-link" />
+
+        <div className="agent-outcome">
+          <div className="agent-logos">
+            {codingAgents.map((agent) => (
+              <div className="agent-logo" key={agent.name}>
+                {/* The local marks are tiny static assets; image optimization adds no value. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={agent.icon} alt="" width="26" height="26" />
+                <strong>{agent.name}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <FlowParticle />
       </div>
-      <figcaption>Illustration of a coding agent using one DokoSoko connection to resolve a recipe, exact package, scoped setup actions, credentials, code changes, and validation.</figcaption>
+      <figcaption>DokoSoko turns product docs, APIs, SDKs, packages, and recipes into one governed MCP connection for Claude, Codex, Cursor, and OpenCode while API credentials remain encrypted on the server.</figcaption>
     </figure>
   );
 }
 
-function IntegrationKit() {
+function WorkflowBoard() {
   return (
-    <div className="product-proof kit-proof" aria-label="Versioned integration kit illustration">
-      <div className="proof-toolbar">
-        <span><i className="proof-dot blue" /> Identity Platform</span>
-        <code>integration-kit:v4</code>
+    <div className="workflow-board">
+      <div className="workflow-line" aria-hidden="true"><span /><span /><span /></div>
+      <div className="workflow-stages">
+        {workflowStages.map((stage) => (
+          <article className="workflow-stage" key={stage.index}>
+            <header><span>{stage.index}</span><code>{stage.verb}</code><i /></header>
+            <h3>{stage.title}</h3>
+            <p>{stage.copy}</p>
+            <ul>
+              {stage.items.map((item) => <li key={item}><i aria-hidden="true">✓</i>{item}</li>)}
+            </ul>
+            <footer><span>OUTPUT</span><code>{stage.output}</code></footer>
+          </article>
+        ))}
       </div>
-      <div className="proof-summary">
-        <span><small>DOCUMENTATION</small><strong>Snapshot 18</strong></span>
-        <span><small>RECIPE</small><strong>Revision 7</strong></span>
-        <span><small>API</small><strong>Version 4</strong></span>
+      <div className="responsibility-rail">
+        <span><small>CODING AGENT</small><strong>Writes and tests application code</strong></span>
+        <i aria-hidden="true">+</i>
+        <span><small>DOKOSOKO</small><strong>Resolves inputs and authorizes fixed actions</strong></span>
+        <i aria-hidden="true">+</i>
+        <span><small>PROVIDER</small><strong>Owns resources and issued credentials</strong></span>
       </div>
-      <div className="kit-line"><span><small>PACKAGE</small><strong>@vendor/nextjs-auth</strong></span><code>4.2.1</code><b>exact release</b></div>
-      <div className="kit-line"><span><small>SETUP TOOL</small><strong>applications.create</strong></span><code>revision 3</code><b>scoped</b></div>
-      <div className="kit-line"><span><small>ACCESS</small><strong>Development credential</strong></span><code>provider-issued</code><b>short-lived</b></div>
     </div>
   );
 }
 
-function RecipePreview() {
+function Auth0Evaluation() {
   return (
-    <div className="product-proof recipe-proof" aria-label="Evidence-grounded integration recipe illustration">
-      <div className="tool-title"><span><small>REVIEWED RECIPE</small><strong>nextjs-app-router</strong></span><b>Published</b></div>
-      <div className="recipe-steps">
-        <div><i>01</i><span><strong>Install the exact package</strong><code>npm install @vendor/nextjs-auth@4.2.1</code></span></div>
-        <div><i>02</i><span><strong>Create the application</strong><small>Call the scoped setup tool with the project origin.</small></span></div>
-        <div><i>03</i><span><strong>Configure callbacks</strong><small>Register the development and production redirect URIs.</small></span></div>
-        <div><i>04</i><span><strong>Add session middleware</strong><small>Apply the reviewed App Router implementation pattern.</small></span></div>
+    <div className="evaluation-board" aria-label="Production-shaped Auth0 Management API v2 evaluation evidence flow">
+      <div className="evaluation-head">
+        <span><i /> Auth0 Management API v2</span>
+        <b>EVALUATION CASE</b>
       </div>
-      <div className="recipe-evidence"><span><i /> Evidence current</span><strong>3 reviewed sources</strong><code>fingerprint:9c71…</code></div>
+      <div className="evaluation-inputs">
+        <div><small>REVIEWED KNOWLEDGE</small><strong>2 documentation publications</strong><code>revision 1 · exact fingerprints</code></div>
+        <div><small>API CONTRACT</small><strong>Management API v2</strong><code>token · create user · get user</code></div>
+        <div><small>PINNED PACKAGE SOURCE</small><strong>Auth0 Node.js SDK</strong><code>auth0@6.3.0 · 1,036 files</code></div>
+      </div>
+      <div className="evaluation-converge" aria-hidden="true"><span /><i /><span /></div>
+      <div className="evaluation-connector">
+        <div className="hub-mark">D</div>
+        <span><small>CANDIDATE CONNECTOR RECIPE</small><strong>Auth0 Management API v2 integration path</strong></span>
+        <code>evaluation · evidence bounded</code>
+      </div>
+      <div className="evaluation-runtime">
+        <div><span>01</span><strong>Resolve the DokoSoko endpoint</strong><code>operator origin · POST /mcp</code></div>
+        <i aria-hidden="true">→</i>
+        <div><span>02</span><strong>Require DokoSoko identity</strong><code>oauth2 · fail closed</code></div>
+        <i aria-hidden="true">→</i>
+        <div><span>03</span><strong>Discover only configured access</strong><code>no invented Auth0 tool</code></div>
+      </div>
+      <div className="evaluation-note">
+        <span><i>!</i><strong>Honest boundary</strong></span>
+        <p>The evaluation fails if a recipe invents a configured tool, tenant, credential, completed setup, or direct client-facing Auth0 endpoint.</p>
+      </div>
     </div>
   );
 }
 
-function SetupRun() {
+function ContinuityPath() {
   return (
-    <div className="product-proof setup-proof" aria-label="Scoped setup and validation run illustration">
-      <div className="release-head">
-        <span><small>INTEGRATION RUN</small><strong>Enterprise login setup</strong></span>
-        <b>Complete</b>
+    <div className="continuity-board" aria-label="Published connector version resolution and drift workflow">
+      <div className="continuity-track" aria-hidden="true"><span /><span /><span /></div>
+      <div className="continuity-nodes">
+        <div className="continuity-node active"><span>01</span><small>PUBLISH</small><strong>Integration r18</strong><code>sha256:18b7…</code><b>immutable</b></div>
+        <div className="continuity-node"><span>02</span><small>SELECT</small><strong>Effective version</strong><code>installation → environment → customer → channel</code><b>deterministic</b></div>
+        <div className="continuity-node"><span>03</span><small>DISCOVER</small><strong>One exact snapshot</strong><code>knowledge · recipe · tools</code><b>coherent</b></div>
+        <div className="continuity-node warning"><span>04</span><small>RECHECK</small><strong>Evidence changed</strong><code>evidence or schema drift</code><b>review required</b></div>
       </div>
-      <div className="setup-line"><i>✓</i><span><strong>Provider resource</strong><small>applications.create</small></span><code>created</code></div>
-      <div className="setup-line"><i>✓</i><span><strong>Redirect URIs</strong><small>Development + production</small></span><code>registered</code></div>
-      <div className="setup-line"><i>✓</i><span><strong>Credential</strong><small>Development scope · returned once</small></span><code>issued</code></div>
-      <div className="setup-line"><i>✓</i><span><strong>Acceptance</strong><small>Callback and session behavior</small></span><code>passed</code></div>
-      <div className="setup-footer"><span><i /> Outcome validated</span><strong>API v4 · recipe r7 · package 4.2.1</strong></div>
+      <div className="continuity-return"><span>Changed evidence never silently rewrites a published Integration or recipe.</span><i aria-hidden="true">↺</i><strong>Review → publish a new revision</strong></div>
+    </div>
+  );
+}
+
+function GuardrailPath() {
+  return (
+    <div className="gate-board" aria-label="Policy gates applied to a scoped provider action">
+      <div className="gate-start"><small>INBOUND</small><strong>MCP tool call</strong><code>structured arguments</code></div>
+      <div className="gate-line" aria-hidden="true" />
+      <div className="gate-list">
+        {guardrails.map(([index, label, detail]) => (
+          <div className="gate" key={index}>
+            <span>{index}</span><i aria-hidden="true">✓</i><strong>{label}</strong><small>{detail}</small>
+          </div>
+        ))}
+      </div>
+      <div className="gate-line" aria-hidden="true" />
+      <div className="gate-end"><small>OUTBOUND</small><strong>Fixed provider action</strong><code>validated JSON response</code></div>
     </div>
   );
 }
@@ -150,137 +229,77 @@ export default function Home() {
         <div className="shell header-inner">
           <a className="brand-link" href="#top" aria-label="DokoSoko home"><Brand /></a>
           <nav className="site-nav" aria-label="Main navigation">
-            <a href="#product">Product</a>
             <a href="#workflow">Workflow</a>
+            <a href="#evaluation">Evaluation</a>
             <a href="#trust">Guardrails</a>
           </nav>
-          <a className="header-link" href={quickstartUrl}>Build your connector <span aria-hidden="true">→</span></a>
+          <a className="header-link" href={productSetupUrl}>Build a connector <span aria-hidden="true">→</span></a>
         </div>
       </header>
 
       <main id="main-content">
         <section className="hero" id="top">
           <div className="shell hero-inner">
-            <div className="hero-copy">
-              <p className="kicker"><span /> The integration layer for software products</p>
-              <h1>Make your product <em>one prompt away.</em></h1>
-              <div className="hero-bottom">
-                <p>DokoSoko gives coding agents the exact docs, recipes, package releases, and scoped setup tools they need to take a developer from intent to a working integration through one versioned MCP connection.</p>
-                <div className="hero-actions">
-                  <a className="button button-primary" href={quickstartUrl}>Build your connector <span aria-hidden="true">→</span></a>
-                  <a className="text-link" href="#product">See the integration flow <Arrow /></a>
+            <div className="hero-layout">
+              <div className="hero-message">
+                <div className="hero-heading">
+                  <h1>Make your product <em>one prompt away.</em></h1>
+                </div>
+                <div className="hero-copy">
+                  <div className="hero-bottom">
+                    <p>Turn your docs, APIs, SDKs, packages, recipes, and authenticated setup into one MCP endpoint—so coding agents can take developers from prompt to a working integration.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <AgentIntegrationPreview />
-          </div>
-          <div className="standard-rail">
-            <div className="shell">
-              {standards.map((standard) => <span key={standard}><i aria-hidden="true">✓</i>{standard}</span>)}
+              <ConnectorSpinePreview />
             </div>
           </div>
         </section>
 
-        <section className="fragmentation section" id="product">
-          <div className="shell split-intro">
-            <p className="section-label">THE OLD WAY</p>
+        <section className="workflow-section section" id="workflow">
+          <div className="shell split-intro workflow-intro">
+            <p className="section-label">ONE CONNECTED WORKFLOW</p>
             <div>
-              <h2>Integration should start with intent—not a scavenger hunt.</h2>
-              <p>Developers lose time finding the right guide, choosing a compatible package, clicking through account setup, creating credentials, and discovering the missing nuance at the end. DokoSoko assembles that path before the coding agent starts.</p>
+              <h2>Build the connector once. Let it carry the integration.</h2>
+              <p>Developers should not have to reconstruct your product from documentation tabs, package registries, admin screens, and credential forms. DokoSoko turns those separate surfaces into one published path the agent can discover, follow, and verify.</p>
             </div>
           </div>
-          <div className="shell system-map" aria-label="Five integration chores assembled into one DokoSoko connector">
-            <div className="system-inputs">
-              <span>Find the right docs<small>Which guide?</small></span>
-              <span>Choose the SDK<small>Which package?</small></span>
-              <span>Match versions<small>Will these work?</small></span>
-              <span>Configure the account<small>Where do I click?</small></span>
-              <span>Prove it works<small>What did I miss?</small></span>
+          <div className="shell"><WorkflowBoard /></div>
+        </section>
+
+        <section className="evaluation-section section" id="evaluation">
+          <div className="shell evaluation-layout">
+            <div className="evaluation-copy">
+              <p className="section-label">GROUNDED EVALUATION</p>
+              <h2>Real evidence. Honest boundaries.</h2>
+              <p>The evaluation suite includes a frozen, production-shaped Auth0 Management API v2 benchmark. It combines two reviewed documentation publications, a bounded API contract, and an exact 1,036-file source export of <code>auth0@6.3.0</code> to test whether DokoSoko can produce an evidence-grounded implementation recipe without inventing a configured capability.</p>
+              <p className="evaluation-disclaimer">The benchmark is offline and includes no live tenant, credentials, customer data, or executable network calls. It is not a shipped Auth0 connector or partnership claim.</p>
+              <a className="text-link" href={architectureUrl}>See how Integrations work <Arrow /></a>
             </div>
-            <div className="system-join"><span /><i>↓</i><span /></div>
-            <div className="system-output"><Brand compact /><span>One integration manifest</span><span>One executable recipe</span><span>One validated path</span></div>
+            <Auth0Evaluation />
           </div>
         </section>
 
-        <section className="capabilities" id="workflow" aria-label="DokoSoko integration workflow">
-          <article className="capability-row">
-            <div className="shell capability-grid">
-              <div className="capability-copy">
-                <span className="capability-index">01 / ASSEMBLE</span>
-                <h2>Everything the agent needs, assembled upfront.</h2>
-                <p>Bind reviewed documentation, API contracts, exact external package releases, recipes, and setup tools to the right API version. The agent receives one coherent integration kit—not a set of disconnected search results.</p>
-                <a className="text-link" href={`${docsUrl}guides/product-definitions/`}>Explore integration manifests <Arrow /></a>
-              </div>
-              <IntegrationKit />
-            </div>
-          </article>
-
-          <article className="capability-row capability-dark">
-            <div className="shell capability-grid reverse">
-              <RecipePreview />
-              <div className="capability-copy">
-                <span className="capability-index">02 / GUIDE</span>
-                <h2>A recipe, not a pile of links.</h2>
-                <p>Turn product knowledge into reviewed, evidence-grounded implementation steps. Recipes cite the exact sources they depend on and move back into review when that evidence changes.</p>
-                <a className="text-link" href={docsUrl}>See the documentation <Arrow /></a>
-              </div>
-            </div>
-          </article>
-
-          <article className="capability-row">
-            <div className="shell capability-grid">
-              <div className="capability-copy">
-                <span className="capability-index">03 / COMPLETE</span>
-                <h2>Setup tools that finish the job.</h2>
-                <p>Let the coding agent create provider resources, register callbacks, and request one-time credentials through fixed, scoped actions. Then validate the integration outcome instead of stopping at generated code.</p>
-                <a className="text-link" href={`${docsUrl}guides/custom-tools/`}>Explore scoped setup tools <Arrow /></a>
-              </div>
-              <SetupRun />
-            </div>
-          </article>
-        </section>
-
-        <section className="delivery-section section" id="delivery">
+        <section className="continuity-section section" id="delivery">
           <div className="shell split-intro">
-            <p className="section-label">KEEP IT WORKING</p>
+            <p className="section-label">KEEP IT COHERENT</p>
             <div>
-              <h2>The correct versions. A validated outcome.</h2>
-              <p>DokoSoko keeps the integration kit coherent as your product changes. Every publication binds exact inputs, every rollout is deliberate, and acceptance checks show whether the requested path still works.</p>
+              <h2>Exact when published. Deliberate when changed.</h2>
+              <p>A published connector never floats with whatever documentation page or package version happens to be latest. DokoSoko binds exact compatible revisions, moves evidence-dependent recipes to review when evidence changes, and fails closed on managed schema drift.</p>
             </div>
           </div>
-
-          <div className="shell delivery-map">
-            <div className="release-node">
-              <span className="node-label">PUBLISHED INTEGRATION KIT</span>
-              <strong>Identity Platform · API v4</strong>
-              <code>manifest sha256:18b7…</code>
-              <span className="node-status"><i /> exact + immutable</span>
-            </div>
-            <div className="delivery-connector" aria-hidden="true"><span /><i /><span /></div>
-            <div className="channel-list">
-              <div className="channel-row"><span>01</span><div><strong>Compatible inputs</strong><p>Documentation, recipe, package, tool, and authorization revisions resolve together.</p></div><b>Exact revisions</b></div>
-              <div className="channel-row"><span>02</span><div><strong>Controlled rollout</strong><p>Latest, LTS, and Preview policies can be overridden per customer, environment, or installation.</p></div><b>No silent mix</b></div>
-              <div className="channel-row"><span>03</span><div><strong>Acceptance evidence</strong><p>Preflight and live integration runs check the configured path—not merely the generated code.</p></div><b>Outcome checked</b></div>
-            </div>
-          </div>
+          <div className="shell"><ContinuityPath /></div>
         </section>
 
-        <section className="trust-section" id="trust">
-          <div className="shell trust-grid">
-            <div className="trust-statement">
-              <p className="section-label">BUILT-IN GUARDRAILS</p>
-              <h2>Fast without weakening the boundary.</h2>
-              <blockquote>“The agent is a caller—not a trusted administrator.”</blockquote>
-              <a className="button button-light" href={securityUrl}>Read the full security model <span aria-hidden="true">→</span></a>
+        <section className="trust-section section" id="trust">
+          <div className="shell trust-layout">
+            <div className="trust-copy">
+              <p className="section-label">GUARDRAILS ON THE PATH</p>
+              <h2>Fast because the boundaries are already defined.</h2>
+              <p>The agent supplies structured arguments. DokoSoko enforces publication state, identity, grants, confirmation, fixed destinations, and closed schemas before execution, then records the result in audit.</p>
+              <a className="button button-light" href={securityUrl}>Read the security model <span aria-hidden="true">→</span></a>
             </div>
-            <div className="boundary-list">
-              {boundaries.map(([label, copy], index) => (
-                <div className="boundary-row" key={label}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <div><h3>{label}</h3><p>{copy}</p></div>
-                </div>
-              ))}
-            </div>
+            <GuardrailPath />
           </div>
         </section>
 
@@ -288,13 +307,13 @@ export default function Home() {
           <div className="shell closing-grid">
             <div>
               <p className="section-label">THE SHORTER PATH</p>
-              <h2>Make your product one prompt away.</h2>
+              <h2>One connector from developer intent to a working integration.</h2>
             </div>
             <div className="closing-action">
-              <p>Give developers one connector that carries the right knowledge, recipe, package, setup actions, credentials, and validation for your product.</p>
+              <p>Connect your product knowledge, API contract, setup actions, and access policy once. Give every supported coding agent the same exact integration path.</p>
               <div className="hero-actions">
-                <a className="button button-light" href={quickstartUrl}>Build your connector <span aria-hidden="true">→</span></a>
-                <a className="text-link light" href={githubUrl} target="_blank" rel="noreferrer">Browse the source <Arrow /></a>
+                <a className="button button-light" href={productSetupUrl}>Build a connector <span aria-hidden="true">→</span></a>
+                <a className="text-link light" href={architectureUrl}>See the architecture <Arrow /></a>
               </div>
             </div>
           </div>

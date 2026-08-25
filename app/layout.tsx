@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "DokoSoko — Make your product one prompt away",
   description:
-    "Give coding agents the exact docs, reviewed recipes, package releases, scoped setup tools, and credentials needed to integrate your product through one versioned MCP connection.",
+    "Publish one versioned connector with exact product knowledge, compatible package metadata, and policy-bound setup actions for coding agents.",
   icons: { icon: "./favicon.svg" },
   openGraph: {
     title: "DokoSoko — Make your product one prompt away",
     description:
-      "The integration layer that takes coding agents from developer intent to a working, validated integration.",
+      "One versioned connector from developer intent to exact guidance, policy-bound setup, and a verifiable integration outcome.",
     type: "website",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "DokoSoko — Make your product one prompt away",
-    description: "From developer intent to a working integration through one versioned MCP connection.",
+    description: "One versioned connector from developer intent to exact guidance, policy-bound setup, and a verifiable integration outcome.",
     images: ["og.png"],
   },
 };
