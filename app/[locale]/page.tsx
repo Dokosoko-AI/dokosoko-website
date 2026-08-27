@@ -6,8 +6,8 @@ import FlowParticle from "../flow-particle";
 import IntegrationRunDemo from "../integration-run-demo";
 import LanguageSelector from "../language-selector";
 
-const docsUrl = "/dokosoko-docs/";
-const productSetupUrl = `${docsUrl}guides/product-setup/`;
+const docsUrl = "https://docs.dokosoko.ai/";
+const productSetupUrl = docsUrl;
 const securityUrl = `${docsUrl}concepts/security/`;
 const githubUrl = "https://github.com/Dokosoko-AI/dokosoko-service";
 const creditEmail = "ackermann.yuriy@gmail.com";
