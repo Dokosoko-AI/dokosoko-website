@@ -23,6 +23,13 @@ const codingAgents = [
   { id: "opencode", icon: withBasePath("/agents/opencode.svg") },
 ] as const;
 
+const mcpButtonAgents = [
+  { id: "codex", icon: withBasePath("/agent-client-icons/codex.svg") },
+  { id: "claude", icon: withBasePath("/agent-client-icons/claude-code.svg") },
+  { id: "cursor", icon: withBasePath("/agent-client-icons/cursor.svg") },
+  { id: "opencode", icon: withBasePath("/agent-client-icons/opencode.svg") },
+] as const;
+
 const outcomes = ["speed", "simplicity", "success"] as const;
 const workflowSteps = ["publish", "guide", "learn"] as const;
 
@@ -144,6 +151,50 @@ function OutcomePromises() {
   );
 }
 
+function MCPButtonShowcase() {
+  const t = useTranslations();
+
+  return (
+    <section className="mcp-button-section section" aria-labelledby="mcp-button-title">
+      <div className="shell mcp-button-showcase">
+        <div className="mcp-button-message">
+          <p className="section-label">{t("mcpButton.label")}</p>
+          <h2 id="mcp-button-title">{t("mcpButton.title")}</h2>
+          <p>{t("mcpButton.description")}</p>
+        </div>
+
+        <figure className="mcp-button-preview">
+          <div className="mcp-button-preview-header">
+            <span>{t("mcpButton.previewLabel")}</span>
+            <code>&lt;dokosoko-mcp-button&gt;</code>
+          </div>
+          <div className="mcp-button-preview-body">
+            <a
+              className="mcp-embed-button"
+              href={productSetupUrl}
+              target="_blank"
+              rel="noreferrer"
+              data-dokosoko-agent-setup="public"
+              aria-label={t("mcpButton.buttonLabel")}
+            >
+              <span>{t("mcpButton.buttonLabel")}</span>
+              <span className="mcp-embed-clients" aria-hidden="true">
+                {mcpButtonAgents.map((agent) => (
+                  // These local marks mirror the service's generated MCP button.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img key={agent.id} src={agent.icon} alt="" title={t(`agents.${agent.id}`)} width="20" height="20" />
+                ))}
+              </span>
+            </a>
+            <p>{t("mcpButton.previewNote")}</p>
+          </div>
+          <figcaption>{t("mcpButton.caption")}</figcaption>
+        </figure>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const t = useTranslations();
 
@@ -201,6 +252,8 @@ export default function Home() {
           </div>
           <div className="shell"><IntegrationRunDemo /></div>
         </section>
+
+        <MCPButtonShowcase />
 
         <section className="workflow-section section" id="workflow">
           <div className="shell section-intro">

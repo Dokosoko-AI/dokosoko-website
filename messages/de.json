@@ -103,6 +103,15 @@
       }
     }
   },
+  "mcpButton": {
+    "label": "Die Schaltfläche für Ihre Kunden",
+    "title": "Eine Schaltfläche. Alle unterstützten Coding-Agenten.",
+    "description": "Fügen Sie sie Ihrer Dokumentation oder Ihrem Produkt hinzu. Kunden erhalten den passenden Einrichtungsweg für Codex, Claude Code, Cursor oder OpenCode – in ihrer Sprache.",
+    "previewLabel": "Beispiel-Einbettung",
+    "buttonLabel": "Agent mit Acme verbinden",
+    "previewNote": "Beschriftung, Ziel, Sprache und unterstützte Agenten stammen aus Ihrer DokoSoko-Bereitstellung.",
+    "caption": "Die von DokoSoko generierte, einbettbare MCP-Schaltfläche."
+  },
   "workflow": {
     "label": "So funktioniert es",
     "title": "Machen Sie die einfachste Integration zur ersten Wahl Ihrer Kunden.",

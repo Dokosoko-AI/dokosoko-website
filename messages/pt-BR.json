@@ -103,6 +103,15 @@
       }
     }
   },
+  "mcpButton": {
+    "label": "O botão que seus clientes veem",
+    "title": "Um botão. Todos os agentes de programação compatíveis.",
+    "description": "Adicione-o à documentação ou ao produto. Os clientes recebem o caminho exato de configuração para Codex, Claude Code, Cursor ou OpenCode, no idioma deles.",
+    "previewLabel": "Exemplo incorporado",
+    "buttonLabel": "Conecte seu agente à Acme",
+    "previewNote": "O texto, o destino, o idioma e os agentes compatíveis vêm da sua implantação da DokoSoko.",
+    "caption": "O botão MCP incorporável gerado pela DokoSoko."
+  },
   "workflow": {
     "label": "Como funciona",
     "title": "Faça da integração mais fácil a escolha dos clientes.",

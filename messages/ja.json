@@ -103,6 +103,15 @@
       }
     }
   },
+  "mcpButton": {
+    "label": "顧客が目にするボタン",
+    "title": "ひとつのボタンで、対応するすべてのコーディングエージェントへ。",
+    "description": "ドキュメントやプロダクトに追加するだけ。顧客は Codex、Claude Code、Cursor、OpenCode に合った正確な設定手順を自分の言語で確認できます。",
+    "previewLabel": "埋め込み例",
+    "buttonLabel": "エージェントを Acme に接続",
+    "previewNote": "ラベル、リンク先、言語、対応エージェントは DokoSoko のデプロイ設定から自動で反映されます。",
+    "caption": "DokoSoko が生成する埋め込み可能な MCP ボタン。"
+  },
   "workflow": {
     "label": "仕組み",
     "title": "最も簡単な統合を、顧客が選ぶ統合に。",
