@@ -63,6 +63,19 @@ test("locale paths preserve static hosting base paths", () => {
   assert.equal(replacePathLocale("/de/de/", "uk"), "/de/uk/");
 });
 
+test("metadata never falls back to a loopback origin", async () => {
+  const files = [
+    "app/(language-detection)/page.tsx",
+    "app/[locale]/layout.tsx",
+  ];
+
+  for (const file of files) {
+    const source = await readFile(path.join(repositoryRoot, file), "utf8");
+    assert.match(source, /NEXT_PUBLIC_SITE_URL \?\? "https:\/\/dokosoko\.ai\/"/, `${file} must default to the public origin`);
+    assert.doesNotMatch(source, /https?:\/\/(?:localhost|127\.0\.0\.1|\[?::1\]?)/, `${file} must not emit loopback metadata`);
+  }
+});
+
 test("localized UI components contain no direct English display literals", async () => {
   const files = [
     "app/[locale]/page.tsx",

@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 import { routing } from "../../i18n/routing";
 
-const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/");
+const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dokosoko.ai/");
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale: routing.defaultLocale, namespace: "metadata" });

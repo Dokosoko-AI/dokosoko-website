@@ -7,7 +7,7 @@ import { routing, type AppLocale } from "../../i18n/routing";
 import { geistMono, geistSans } from "../fonts";
 import "../globals.css";
 
-const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/");
+const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://dokosoko.ai/");
 
 const openGraphLocales: Record<AppLocale, string> = {
   en: "en_US",
