@@ -9,7 +9,7 @@ import LanguageSelector from "../language-selector";
 const docsUrl = "/dokosoko-docs/";
 const productSetupUrl = `${docsUrl}guides/product-setup/`;
 const securityUrl = `${docsUrl}concepts/security/`;
-const githubUrl = "https://github.com/Dokosoko/dokosoko-service";
+const githubUrl = "https://github.com/Dokosoko-AI/dokosoko-service";
 const creditEmail = "ackermann.yuriy@gmail.com";
 const creditGithubUrl = "https://github.com/yackermann";
 const codexUrl = "https://openai.com/codex/";
