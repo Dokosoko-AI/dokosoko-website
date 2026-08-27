@@ -83,56 +83,59 @@
     }
   },
   "runSection": {
-    "label": "Integration success",
-    "title": "A clear path from customer intent to a confirmed result.",
-    "description": "Developers keep the coding agent they prefer. DokoSoko supplies your approved guidance, checks permitted setup, and records the outcome once it is confirmed."
+    "label": "The integration gap",
+    "title": "From weeks of integration work to one prompt."
   },
   "runDemo": {
-    "eyebrow": "Illustrative customer journey",
-    "title": "From a customer goal to a confirmed result",
-    "agentPickerAria": "Select a supported coding agent",
-    "agentPickerLabel": "Developer’s coding agent",
-    "customerGoalAria": "Customer goal",
-    "customerGoalLabel": "Customer goal",
-    "requestedOutcome": "Get the first live request working inside our application.",
-    "context": {
-      "agentLabel": "Coding agent",
-      "stageLabel": "Customer stage",
-      "stageValue": "New integration",
-      "targetLabel": "Target",
-      "targetValue": "First successful use"
+    "comparisonAria": "Comparison of the integration path with and without DokoSoko",
+    "versus": "vs",
+    "traditional": {
+      "eyebrow": "Without DokoSoko",
+      "time": "2–8 weeks",
+      "timeLabel": "to a first working integration",
+      "title": "Too many tasks, too many docs, too many handoffs.",
+      "steps": {
+        "documentation": "Request product documentation",
+        "developerAccount": "Request a developer account",
+        "readDocs": "Reconstruct the path from scattered docs",
+        "choosePackage": "Choose the right SDK, package, and version",
+        "setupAccess": "Configure API keys, secrets, and permissions",
+        "findExamples": "Find an example that still works",
+        "support": "Wait for answers and approvals",
+        "debug": "Build, debug, retry, and escalate"
+      },
+      "summaryLabel": "The hidden cost",
+      "summary": "Integration becomes a project of its own—before your customer reaches value."
     },
-    "traceAria": "Illustrative run trace",
-    "trace": {
-      "understand": {
-        "label": "Understand",
-        "detail": "uses the product guidance your team approved"
+    "dokosoko": {
+      "eyebrow": "With DokoSoko",
+      "time": "A few hours",
+      "timeLabel": "to reviewed, working code",
+      "title": "One approved path the agent can execute.",
+      "steps": {
+        "connect": {
+          "title": "Add the DokoSoko MCP",
+          "copy": "Give your coding agent one trusted source for docs, tools, and setup."
+        },
+        "prompt": {
+          "title": "Tell the agent what to build",
+          "copy": "Describe the outcome—not how to navigate the integration."
+        },
+        "implement": {
+          "title": "Let the agent implement and test",
+          "copy": "The coding agent writes the integration, uses permitted tools, and iterates."
+        },
+        "review": {
+          "title": "Review and ship",
+          "copy": "Validate the result and get back to your product."
+        }
       },
-      "build": {
-        "label": "Build",
-        "detail": "writes and tests the integration in the customer’s application"
-      },
-      "checkAccess": {
-        "label": "Check access",
-        "detail": "checks permitted setup actions before they run"
-      },
-      "confirm": {
-        "label": "Confirm",
-        "detail": "records the result when evidence is available"
+      "result": {
+        "label": "Outcome",
+        "title": "Working integration",
+        "copy": "The agent handles the implementation loop. Your customer stays in control."
       }
-    },
-    "result": {
-      "aria": "Illustrative successful customer outcome",
-      "label": "Illustrative outcome",
-      "status": "Success confirmed",
-      "description": "Evidence controlled by your team confirmed the requested outcome.",
-      "items": {
-        "outcome": "Requested outcome confirmed",
-        "access": "Access checks recorded",
-        "sensitive": "Sensitive values excluded"
-      }
-    },
-    "caption": "The coding agent writes and tests the integration. DokoSoko supplies the approved path, checks permitted actions, and records the outcome reported by the caller."
+    }
   },
   "workflow": {
     "label": "How it works",
@@ -192,10 +195,19 @@
     "description": "Give every customer a faster, simpler path from first prompt to first value.",
     "getStarted": "Get started"
   },
+  "github": {
+    "repositoryLabel": "Star DokoSoko on GitHub",
+    "star": "Star"
+  },
   "footer": {
     "tagline": "Helping software products turn developer interest into successful adoption.",
     "documentation": "Documentation",
     "security": "Security",
-    "github": "GitHub"
+    "github": "GitHub",
+    "credit": {
+      "designedBy": "Designed, and created by Yuriy Ackermann",
+      "codex": "Xoxoxo Codex",
+      "codexLink": "Codex"
+    }
   }
 }

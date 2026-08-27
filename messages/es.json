@@ -55,36 +55,59 @@
     }
   },
   "runSection": {
-    "label": "Éxito de la integración",
-    "title": "Una ruta clara desde la intención del cliente hasta un resultado confirmado.",
-    "description": "Los desarrolladores conservan el agente de programación que prefieren. DokoSoko aporta tus instrucciones aprobadas, comprueba la configuración permitida y registra el resultado cuando se confirma."
+    "label": "La brecha de integración",
+    "title": "De semanas de integración a un solo prompt."
   },
   "runDemo": {
-    "eyebrow": "Ejemplo del recorrido del cliente",
-    "title": "Del objetivo del cliente a un resultado confirmado",
-    "agentPickerAria": "Seleccionar un agente de programación compatible",
-    "agentPickerLabel": "Agente de programación del desarrollador",
-    "customerGoalAria": "Objetivo del cliente",
-    "customerGoalLabel": "Objetivo del cliente",
-    "requestedOutcome": "Hacer funcionar la primera solicitud real dentro de nuestra aplicación.",
-    "context": {
-      "agentLabel": "Agente de programación", "stageLabel": "Etapa del cliente", "stageValue": "Nueva integración", "targetLabel": "Objetivo", "targetValue": "Primer uso satisfactorio"
+    "comparisonAria": "Comparación del proceso de integración con y sin DokoSoko",
+    "versus": "vs.",
+    "traditional": {
+      "eyebrow": "Sin DokoSoko",
+      "time": "2–8 semanas",
+      "timeLabel": "hasta la primera integración funcional",
+      "title": "Demasiadas tareas, demasiados documentos, demasiados traspasos.",
+      "steps": {
+        "documentation": "Solicitar documentación del producto",
+        "developerAccount": "Solicitar una cuenta de desarrollador",
+        "readDocs": "Reconstruir el camino a partir de documentación dispersa",
+        "choosePackage": "Elegir el SDK, el paquete y la versión adecuados",
+        "setupAccess": "Configurar claves de API, secretos y permisos",
+        "findExamples": "Encontrar un ejemplo que todavía funcione",
+        "support": "Esperar respuestas y aprobaciones",
+        "debug": "Implementar, depurar, reintentar y escalar"
+      },
+      "summaryLabel": "El coste oculto",
+      "summary": "La integración se convierte en un proyecto propio antes de que el cliente obtenga valor."
     },
-    "traceAria": "Traza de ejecución ilustrativa",
-    "trace": {
-      "understand": { "label": "Comprender", "detail": "usa las instrucciones del producto aprobadas por tu equipo" },
-      "build": { "label": "Crear", "detail": "escribe y prueba la integración en la aplicación del cliente" },
-      "checkAccess": { "label": "Comprobar acceso", "detail": "comprueba las acciones de configuración permitidas antes de ejecutarlas" },
-      "confirm": { "label": "Confirmar", "detail": "registra el resultado cuando hay pruebas disponibles" }
-    },
-    "result": {
-      "aria": "Ejemplo de resultado satisfactorio del cliente",
-      "label": "Resultado ilustrativo",
-      "status": "Éxito confirmado",
-      "description": "Las pruebas controladas por tu equipo confirmaron el resultado solicitado.",
-      "items": { "outcome": "Resultado solicitado confirmado", "access": "Comprobaciones de acceso registradas", "sensitive": "Valores sensibles excluidos" }
-    },
-    "caption": "El agente de programación escribe y prueba la integración. DokoSoko proporciona la ruta aprobada, comprueba las acciones permitidas y registra el resultado comunicado por quien realiza la llamada."
+    "dokosoko": {
+      "eyebrow": "Con DokoSoko",
+      "time": "Unas horas",
+      "timeLabel": "hasta obtener código funcional y revisado",
+      "title": "Un único camino aprobado que el agente puede ejecutar.",
+      "steps": {
+        "connect": {
+          "title": "Añadir el MCP de DokoSoko",
+          "copy": "Dale a tu agente de programación una fuente fiable para la documentación, las herramientas y la configuración."
+        },
+        "prompt": {
+          "title": "Indicar al agente qué debe crear",
+          "copy": "Describe el resultado, no cómo abrirte paso por la integración."
+        },
+        "implement": {
+          "title": "Dejar que el agente implemente y pruebe",
+          "copy": "El agente escribe la integración, usa las herramientas permitidas e itera."
+        },
+        "review": {
+          "title": "Revisar y lanzar",
+          "copy": "Valida el resultado y vuelve a centrarte en tu producto."
+        }
+      },
+      "result": {
+        "label": "Resultado",
+        "title": "Integración funcionando",
+        "copy": "El agente se encarga del ciclo de implementación. Tu cliente mantiene el control."
+      }
+    }
   },
   "workflow": {
     "label": "Cómo funciona",
@@ -114,8 +137,13 @@
     "description": "Ofrece a cada cliente una ruta más rápida y sencilla desde el primer prompt hasta el primer valor.",
     "getStarted": "Comenzar"
   },
+  "github": {
+    "repositoryLabel": "Dar una estrella a DokoSoko en GitHub",
+    "star": "Estrella"
+  },
   "footer": {
     "tagline": "Ayudamos a los productos de software a convertir el interés de los desarrolladores en una adopción satisfactoria.",
-    "documentation": "Documentación", "security": "Seguridad", "github": "GitHub"
+    "documentation": "Documentación", "security": "Seguridad", "github": "GitHub",
+    "credit": { "designedBy": "Diseñado y creado por Yuriy Ackermann", "codex": "Xoxoxo Codex", "codexLink": "Codex" }
   }
 }

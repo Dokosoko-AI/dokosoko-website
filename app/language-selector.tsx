@@ -16,9 +16,20 @@ const optionKeys: Record<AppLocale, "en" | "es" | "fr" | "de" | "ja" | "uk" | "p
   "pt-BR": "ptBR",
 };
 
+const localePresentation: Record<AppLocale, { flag: string; short: string }> = {
+  en: { flag: "🇬🇧", short: "EN" },
+  es: { flag: "🇪🇸", short: "ES" },
+  fr: { flag: "🇫🇷", short: "FR" },
+  de: { flag: "🇩🇪", short: "DE" },
+  ja: { flag: "🇯🇵", short: "JA" },
+  uk: { flag: "🇺🇦", short: "UK" },
+  "pt-BR": { flag: "🇧🇷", short: "PT" },
+};
+
 export default function LanguageSelector() {
-  const locale = useLocale();
+  const locale = useLocale() as AppLocale;
   const t = useTranslations("language");
+  const current = localePresentation[locale];
 
   useEffect(() => {
     try {
@@ -43,9 +54,10 @@ export default function LanguageSelector() {
 
   return (
     <label className="language-selector">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z" />
+      <span className="language-selector-flag" aria-hidden="true">{current.flag}</span>
+      <span className="language-selector-code" aria-hidden="true">{current.short}</span>
+      <svg className="language-selector-chevron" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="m4 6 4 4 4-4" />
       </svg>
       <span className="visually-hidden">{t("label")}</span>
       <select
@@ -55,7 +67,9 @@ export default function LanguageSelector() {
         onChange={(event) => changeLocale(event.target.value as AppLocale)}
       >
         {routing.locales.map((candidate) => (
-          <option key={candidate} value={candidate}>{t(`options.${optionKeys[candidate]}`)}</option>
+          <option key={candidate} value={candidate}>
+            {localePresentation[candidate].flag} {t(`options.${optionKeys[candidate]}`)}
+          </option>
         ))}
       </select>
     </label>

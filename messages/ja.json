@@ -49,36 +49,59 @@
     }
   },
   "runSection": {
-    "label": "統合の成功",
-    "title": "顧客の意図から確認済みの結果まで、明確な一本道を。",
-    "description": "開発者は好みのコーディングエージェントをそのまま使えます。DokoSoko が承認済みのガイダンスを提供し、許可された設定を確認して、確定した結果を記録します。"
+    "label": "統合のギャップ",
+    "title": "数週間の連携作業を、ひとつのプロンプトに。"
   },
   "runDemo": {
-    "eyebrow": "カスタマージャーニーの例",
-    "title": "顧客の目標から確認済みの結果まで",
-    "agentPickerAria": "対応するコーディングエージェントを選択",
-    "agentPickerLabel": "開発者のコーディングエージェント",
-    "customerGoalAria": "顧客の目標",
-    "customerGoalLabel": "顧客の目標",
-    "requestedOutcome": "アプリケーション内で最初の実リクエストを動作させる。",
-    "context": {
-      "agentLabel": "コーディングエージェント", "stageLabel": "顧客ステージ", "stageValue": "新規統合", "targetLabel": "目標", "targetValue": "最初の利用成功"
+    "comparisonAria": "DokoSoko の有無による連携プロセスの比較",
+    "versus": "対",
+    "traditional": {
+      "eyebrow": "DokoSoko なし",
+      "time": "2〜8週間",
+      "timeLabel": "最初の動作する統合まで",
+      "title": "多すぎる作業、多すぎるドキュメント、多すぎる引き継ぎ。",
+      "steps": {
+        "documentation": "プロダクトのドキュメントを依頼",
+        "developerAccount": "開発者アカウントを申請",
+        "readDocs": "分散したドキュメントから正しい手順を再構成",
+        "choosePackage": "適切な SDK、パッケージ、バージョンを選択",
+        "setupAccess": "API キー、シークレット、権限を設定",
+        "findExamples": "今も動く実装例を探す",
+        "support": "回答と承認を待つ",
+        "debug": "実装、デバッグ、再試行、エスカレーション"
+      },
+      "summaryLabel": "見えないコスト",
+      "summary": "顧客が価値を得る前に、連携そのものが一つのプロジェクトになってしまいます。"
     },
-    "traceAria": "実行トレースの例",
-    "trace": {
-      "understand": { "label": "理解", "detail": "チームが承認したプロダクトガイダンスを使用" },
-      "build": { "label": "構築", "detail": "顧客のアプリケーションで統合を実装してテスト" },
-      "checkAccess": { "label": "アクセス確認", "detail": "実行前に許可された設定操作を確認" },
-      "confirm": { "label": "確定", "detail": "証拠が得られた時点で結果を記録" }
-    },
-    "result": {
-      "aria": "顧客が成功した結果の例",
-      "label": "結果の例",
-      "status": "成功を確認",
-      "description": "チームが管理する証拠によって、要求された結果が確認されました。",
-      "items": { "outcome": "要求された結果を確認", "access": "アクセス確認を記録", "sensitive": "機密値を除外" }
-    },
-    "caption": "コーディングエージェントが統合を実装してテストします。DokoSoko は承認済みの手順を提供し、許可された操作を確認して、呼び出し元から報告された結果を記録します。"
+    "dokosoko": {
+      "eyebrow": "DokoSoko なら",
+      "time": "わずか数時間",
+      "timeLabel": "レビュー可能な動作するコードまで",
+      "title": "エージェントが実行できる、承認済みの一本道。",
+      "steps": {
+        "connect": {
+          "title": "DokoSoko MCP を追加",
+          "copy": "コーディングエージェントに、ドキュメント、ツール、設定の信頼できる情報源をひとつ提供します。"
+        },
+        "prompt": {
+          "title": "作るものをエージェントに伝える",
+          "copy": "複雑な連携手順ではなく、望む成果を伝えます。"
+        },
+        "implement": {
+          "title": "エージェントに実装とテストを任せる",
+          "copy": "エージェントが連携コードを書き、許可されたツールを使って改善を重ねます。"
+        },
+        "review": {
+          "title": "レビューしてリリース",
+          "copy": "結果を検証し、本来のプロダクト開発に戻れます。"
+        }
+      },
+      "result": {
+        "label": "成果",
+        "title": "連携の動作を確認",
+        "copy": "エージェントが実装と改善を担い、顧客は主導権を保ちます。"
+      }
+    }
   },
   "workflow": {
     "label": "仕組み",
@@ -108,8 +131,13 @@
     "description": "最初のプロンプトから最初の価値まで、すべての顧客により速くシンプルな道筋を提供します。",
     "getStarted": "始める"
   },
+  "github": {
+    "repositoryLabel": "GitHub で DokoSoko にスターを付ける",
+    "star": "スター"
+  },
   "footer": {
     "tagline": "ソフトウェアプロダクトが開発者の関心を導入成功へ変えるお手伝いをします。",
-    "documentation": "ドキュメント", "security": "セキュリティ", "github": "GitHub"
+    "documentation": "ドキュメント", "security": "セキュリティ", "github": "GitHub",
+    "credit": { "designedBy": "デザイン・制作：Yuriy Ackermann", "codex": "Xoxoxo Codex", "codexLink": "Codex" }
   }
 }

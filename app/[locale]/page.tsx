@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Script from "next/script";
 
 import { withBasePath } from "../../i18n/assets";
 import FlowParticle from "../flow-particle";
@@ -9,6 +10,9 @@ const docsUrl = "/dokosoko-docs/";
 const productSetupUrl = `${docsUrl}guides/product-setup/`;
 const securityUrl = `${docsUrl}concepts/security/`;
 const githubUrl = "https://github.com/Dokosoko/dokosoko-service";
+const creditEmail = "ackermann.yuriy@gmail.com";
+const creditGithubUrl = "https://github.com/yackermann";
+const codexUrl = "https://openai.com/codex/";
 
 const integrationSurfaces = ["docs", "apis", "sdks", "packages", "recipes"] as const;
 
@@ -21,7 +25,6 @@ const codingAgents = [
 
 const outcomes = ["speed", "simplicity", "success"] as const;
 const workflowSteps = ["publish", "guide", "learn"] as const;
-const trustPillars = ["reliable", "safe", "visible"] as const;
 
 function Brand({ compact = false }: { compact?: boolean }) {
   const t = useTranslations();
@@ -150,13 +153,26 @@ export default function Home() {
       <header className="site-header">
         <div className="shell header-inner">
           <a className="brand-link" href="#top" aria-label={t("accessibility.home")}><Brand /></a>
-          <nav className="site-nav" aria-label={t("accessibility.mainNavigation")}>
-            <a href="#outcomes">{t("navigation.why")}</a>
-            <a href="#workflow">{t("navigation.how")}</a>
-            <a href="#security">{t("navigation.trust")}</a>
-          </nav>
-          <LanguageSelector />
-          <a className="header-link" href={productSetupUrl}>{t("navigation.getStarted")} <span aria-hidden="true">→</span></a>
+              <nav className="site-nav" aria-label={t("accessibility.mainNavigation")}>
+                <a href="#outcomes">{t("navigation.why")}</a>
+                <a href="#run">{t("navigation.how")}</a>
+              </nav>
+          <div className="header-actions">
+            <span className="github-widget-slot">
+              <a
+                className="github-button"
+                href={githubUrl}
+                data-icon="octicon-star"
+                data-size="large"
+                data-show-count="true"
+                aria-label={t("github.repositoryLabel")}
+              >
+                {t("github.star")}
+              </a>
+            </span>
+            <LanguageSelector />
+            <a className="header-link" href={productSetupUrl}>{t("navigation.getStarted")} <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </header>
 
@@ -181,7 +197,6 @@ export default function Home() {
             <p className="section-label">{t("runSection.label")}</p>
             <div>
               <h2>{t("runSection.title")}</h2>
-              <p>{t("runSection.description")}</p>
             </div>
           </div>
           <div className="shell"><IntegrationRunDemo /></div>
@@ -196,29 +211,6 @@ export default function Home() {
             </div>
           </div>
           <div className="shell"><Workflow /></div>
-        </section>
-
-        <section className="trust-section section" id="security">
-          <div className="shell trust-head">
-            <p className="section-label">{t("trust.label")}</p>
-            <div>
-              <h2>{t("trust.title")}</h2>
-              <p>{t("trust.description")}</p>
-            </div>
-          </div>
-          <div className="shell trust-grid">
-            {trustPillars.map((pillar, index) => (
-              <article key={pillar}>
-                <header><span>0{index + 1}</span><strong>{t(`trust.pillars.${pillar}.label`)}</strong></header>
-                <h3>{t(`trust.pillars.${pillar}.title`)}</h3>
-                <p>{t(`trust.pillars.${pillar}.copy`)}</p>
-                <p className="trust-detail">{t(`trust.pillars.${pillar}.detail`)}</p>
-              </article>
-            ))}
-          </div>
-          <div className="shell trust-action">
-            <a className="text-link light" href={securityUrl}>{t("trust.learnMore")} <Arrow /></a>
-          </div>
         </section>
 
         <section className="closing-section">
@@ -241,7 +233,22 @@ export default function Home() {
             <a href={githubUrl} target="_blank" rel="noreferrer">{t("footer.github")} <span aria-hidden="true">↗</span></a>
           </nav>
         </div>
+        <div className="shell footer-credit">
+          <p>
+            <span>{t("footer.credit.designedBy")}</span>
+            <span className="footer-credit-separator" aria-hidden="true">·</span>
+            <a href={`mailto:${creditEmail}`}>{creditEmail}</a>
+            <span className="footer-credit-separator" aria-hidden="true">·</span>
+            <a href={creditGithubUrl} target="_blank" rel="noreferrer">{t("footer.github")} <span aria-hidden="true">↗</span></a>
+          </p>
+          <p className="footer-credit-codex">
+            <span>{t("footer.credit.codex")}</span>
+            <span className="footer-credit-separator" aria-hidden="true">·</span>
+            <a href={codexUrl} target="_blank" rel="noreferrer">{t("footer.credit.codexLink")} <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
       </footer>
+      <Script src="https://buttons.github.io/buttons.js" strategy="afterInteractive" />
     </>
   );
 }

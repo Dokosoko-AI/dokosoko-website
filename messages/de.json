@@ -49,36 +49,59 @@
     }
   },
   "runSection": {
-    "label": "Integrationserfolg",
-    "title": "Ein klarer Weg von der Kundenabsicht zum bestätigten Ergebnis.",
-    "description": "Entwickler behalten ihren bevorzugten Coding-Agenten. DokoSoko stellt Ihre freigegebenen Anleitungen bereit, prüft erlaubte Einrichtungsschritte und erfasst das Ergebnis, sobald es bestätigt ist."
+    "label": "Die Integrationslücke",
+    "title": "Aus Wochen voller Integrationsarbeit wird ein Prompt."
   },
   "runDemo": {
-    "eyebrow": "Beispielhafte Customer Journey",
-    "title": "Vom Kundenziel zum bestätigten Ergebnis",
-    "agentPickerAria": "Unterstützten Coding-Agenten auswählen",
-    "agentPickerLabel": "Coding-Agent des Entwicklers",
-    "customerGoalAria": "Kundenziel",
-    "customerGoalLabel": "Kundenziel",
-    "requestedOutcome": "Die erste Live-Anfrage in unserer Anwendung erfolgreich ausführen.",
-    "context": {
-      "agentLabel": "Coding-Agent", "stageLabel": "Kundenphase", "stageValue": "Neue Integration", "targetLabel": "Ziel", "targetValue": "Erste erfolgreiche Nutzung"
+    "comparisonAria": "Vergleich des Integrationswegs mit und ohne DokoSoko",
+    "versus": "vs.",
+    "traditional": {
+      "eyebrow": "Ohne DokoSoko",
+      "time": "2–8 Wochen",
+      "timeLabel": "bis zur ersten funktionierenden Integration",
+      "title": "Zu viele Aufgaben, zu viele Dokumente, zu viele Übergaben.",
+      "steps": {
+        "documentation": "Produktdokumentation anfordern",
+        "developerAccount": "Ein Entwicklerkonto beantragen",
+        "readDocs": "Den Weg aus verstreuter Dokumentation rekonstruieren",
+        "choosePackage": "Das richtige SDK, Paket und die passende Version auswählen",
+        "setupAccess": "API-Schlüssel, Secrets und Berechtigungen konfigurieren",
+        "findExamples": "Ein Beispiel finden, das noch funktioniert",
+        "support": "Auf Antworten und Freigaben warten",
+        "debug": "Implementieren, debuggen, wiederholen und eskalieren"
+      },
+      "summaryLabel": "Die versteckten Kosten",
+      "summary": "Die Integration wird zum eigenen Projekt, bevor Ihr Kunde überhaupt einen Nutzen erzielt."
     },
-    "traceAria": "Beispielhafter Ausführungsverlauf",
-    "trace": {
-      "understand": { "label": "Verstehen", "detail": "nutzt die von Ihrem Team freigegebenen Produktanleitungen" },
-      "build": { "label": "Erstellen", "detail": "schreibt und testet die Integration in der Anwendung des Kunden" },
-      "checkAccess": { "label": "Zugriff prüfen", "detail": "prüft erlaubte Einrichtungsschritte vor ihrer Ausführung" },
-      "confirm": { "label": "Bestätigen", "detail": "erfasst das Ergebnis, sobald Nachweise vorliegen" }
-    },
-    "result": {
-      "aria": "Beispiel für ein erfolgreiches Kundenergebnis",
-      "label": "Beispielergebnis",
-      "status": "Erfolg bestätigt",
-      "description": "Von Ihrem Team kontrollierte Nachweise haben das angeforderte Ergebnis bestätigt.",
-      "items": { "outcome": "Angefordertes Ergebnis bestätigt", "access": "Zugriffsprüfungen erfasst", "sensitive": "Sensible Werte ausgeschlossen" }
-    },
-    "caption": "Der Coding-Agent schreibt und testet die Integration. DokoSoko stellt den freigegebenen Weg bereit, prüft erlaubte Aktionen und erfasst das vom Aufrufer gemeldete Ergebnis."
+    "dokosoko": {
+      "eyebrow": "Mit DokoSoko",
+      "time": "Einige Stunden",
+      "timeLabel": "bis zu geprüftem, funktionsfähigem Code",
+      "title": "Ein freigegebener Weg, den der Agent ausführen kann.",
+      "steps": {
+        "connect": {
+          "title": "DokoSoko MCP hinzufügen",
+          "copy": "Geben Sie Ihrem Coding-Agenten eine verlässliche Quelle für Dokumentation, Tools und Einrichtung."
+        },
+        "prompt": {
+          "title": "Dem Agenten sagen, was er bauen soll",
+          "copy": "Beschreiben Sie das Ergebnis – nicht den Weg durch die Integration."
+        },
+        "implement": {
+          "title": "Den Agenten implementieren und testen lassen",
+          "copy": "Der Coding-Agent schreibt die Integration, nutzt erlaubte Tools und verbessert sie iterativ."
+        },
+        "review": {
+          "title": "Prüfen und veröffentlichen",
+          "copy": "Validieren Sie das Ergebnis und widmen Sie sich wieder Ihrem Produkt."
+        }
+      },
+      "result": {
+        "label": "Ergebnis",
+        "title": "Integration funktioniert",
+        "copy": "Der Agent übernimmt die Implementierungsschleife. Ihr Kunde behält die Kontrolle."
+      }
+    }
   },
   "workflow": {
     "label": "So funktioniert es",
@@ -108,8 +131,13 @@
     "description": "Geben Sie jedem Kunden einen schnelleren, einfacheren Weg vom ersten Prompt zum ersten Nutzen.",
     "getStarted": "Loslegen"
   },
+  "github": {
+    "repositoryLabel": "DokoSoko auf GitHub mit einem Stern markieren",
+    "star": "Stern"
+  },
   "footer": {
     "tagline": "Wir helfen Softwareprodukten, Entwicklerinteresse in erfolgreiche Einführung zu verwandeln.",
-    "documentation": "Dokumentation", "security": "Sicherheit", "github": "GitHub"
+    "documentation": "Dokumentation", "security": "Sicherheit", "github": "GitHub",
+    "credit": { "designedBy": "Entworfen und erstellt von Yuriy Ackermann", "codex": "Xoxoxo Codex", "codexLink": "Codex" }
   }
 }
