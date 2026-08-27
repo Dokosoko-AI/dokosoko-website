@@ -9,7 +9,24 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3000`. The root route detects a saved or browser-preferred
+language and falls back to English. You can also open a locale directly, for
+example `http://localhost:3000/ja/`.
+
+The site currently ships English, Spanish, French, German, Japanese, Ukrainian,
+and Brazilian Portuguese. English is the source catalog in `messages/en.json`;
+all user-facing copy is accessed through `next-intl` translation keys.
+
+## Verification
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+The i18n tests verify locale detection and require every catalog to match the
+complete English key structure.
 
 ## Production build
 

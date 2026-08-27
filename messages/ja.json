@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "DokoSoko — プロンプトひとつで、あなたのプロダクトへ",
+    "description": "プロンプトから動作する実装まで、正確で承認済みの一本道を提供し、開発者によるプロダクト統合を加速します。",
+    "socialDescription": "開発者の意図から動作する統合までを、より速く、よりシンプルに。",
+    "imageAlt": "DokoSoko — プロンプトひとつで、あなたのプロダクトへ。"
+  },
+  "redirect": {
+    "message": "最適な言語を選択しています…",
+    "fallback": "英語で続ける"
+  },
+  "title": { "main": "DokoSoko" },
+  "language": {
+    "label": "言語",
+    "options": {
+      "en": "English", "es": "Español", "fr": "Français", "de": "Deutsch", "ja": "日本語", "uk": "Українська", "ptBR": "Português (Brasil)"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "本文へ移動",
+    "home": "DokoSoko ホーム",
+    "mainNavigation": "メインナビゲーション",
+    "footerNavigation": "フッターナビゲーション"
+  },
+  "navigation": {
+    "why": "DokoSoko を選ぶ理由", "how": "仕組み", "trust": "信頼性", "getStarted": "始める"
+  },
+  "agents": { "claude": "Claude", "codex": "Codex", "cursor": "Cursor", "opencode": "OpenCode" },
+  "diagram": {
+    "surfaces": { "docs": "ドキュメント", "apis": "API", "sdks": "SDK", "packages": "パッケージ", "recipes": "レシピ" },
+    "secureAccess": "安全なアクセス",
+    "mcp": "DokoSoko MCP",
+    "caption": "DokoSoko は、開発者がプロダクトを統合するために必要なすべてを、使い慣れたコーディングエージェント向けの安全な一本道にまとめます。"
+  },
+  "hero": {
+    "titleMain": "あなたのプロダクトを",
+    "titleEmphasis": "プロンプトひとつで。",
+    "description": "開発者を、動作する統合へより速く導きます。DokoSoko はコーディングエージェントに、あなたのプロダクトを進むための正確で承認済みの一本道を提供。検索も推測もやり直しも減らせます。",
+    "journeyLink": "カスタマージャーニーを見る"
+  },
+  "outcomes": {
+    "label": "DokoSoko を選ぶ理由",
+    "title": "導入を速く。摩擦を少なく。価値を得る顧客をもっと多く。",
+    "description": "DokoSoko は、プロダクトの選定から価値の実現までにある統合の摩擦を取り除きます。",
+    "items": {
+      "speed": { "label": "スピード", "title": "顧客が価値を得るまでを短縮。", "copy": "プロダクトを選んでから、顧客のビジネスで価値を生み出すまでの時間を短縮します。" },
+      "simplicity": { "label": "シンプル", "title": "導入を驚くほど簡単に。", "copy": "評価を遅らせ、リリースを延期し、不要なサポート対応を生む統合の摩擦を取り除きます。" },
+      "success": { "label": "成功", "title": "関心を実際の利用へ。", "copy": "より多くの開発者が統合を完了できるよう支援し、見込み顧客を実際に成果を得るアクティブな顧客へ変えます。" }
+    }
+  },
+  "runSection": {
+    "label": "統合の成功",
+    "title": "顧客の意図から確認済みの結果まで、明確な一本道を。",
+    "description": "開発者は好みのコーディングエージェントをそのまま使えます。DokoSoko が承認済みのガイダンスを提供し、許可された設定を確認して、確定した結果を記録します。"
+  },
+  "runDemo": {
+    "eyebrow": "カスタマージャーニーの例",
+    "title": "顧客の目標から確認済みの結果まで",
+    "agentPickerAria": "対応するコーディングエージェントを選択",
+    "agentPickerLabel": "開発者のコーディングエージェント",
+    "customerGoalAria": "顧客の目標",
+    "customerGoalLabel": "顧客の目標",
+    "requestedOutcome": "アプリケーション内で最初の実リクエストを動作させる。",
+    "context": {
+      "agentLabel": "コーディングエージェント", "stageLabel": "顧客ステージ", "stageValue": "新規統合", "targetLabel": "目標", "targetValue": "最初の利用成功"
+    },
+    "traceAria": "実行トレースの例",
+    "trace": {
+      "understand": { "label": "理解", "detail": "チームが承認したプロダクトガイダンスを使用" },
+      "build": { "label": "構築", "detail": "顧客のアプリケーションで統合を実装してテスト" },
+      "checkAccess": { "label": "アクセス確認", "detail": "実行前に許可された設定操作を確認" },
+      "confirm": { "label": "確定", "detail": "証拠が得られた時点で結果を記録" }
+    },
+    "result": {
+      "aria": "顧客が成功した結果の例",
+      "label": "結果の例",
+      "status": "成功を確認",
+      "description": "チームが管理する証拠によって、要求された結果が確認されました。",
+      "items": { "outcome": "要求された結果を確認", "access": "アクセス確認を記録", "sensitive": "機密値を除外" }
+    },
+    "caption": "コーディングエージェントが統合を実装してテストします。DokoSoko は承認済みの手順を提供し、許可された操作を確認して、呼び出し元から報告された結果を記録します。"
+  },
+  "workflow": {
+    "label": "仕組み",
+    "title": "最も簡単な統合を、顧客が選ぶ統合に。",
+    "description": "最初の関心から利用成功まで、すべての開発者に明確な道筋を提供。チームの作業を増やすこともありません。",
+    "resultLabel": "結果",
+    "steps": {
+      "publish": { "verb": "公開", "title": "導入しやすいプロダクトに。", "copy": "顧客に必要なガイダンスと設定を、コーディングエージェントがたどれるひとつの体験にまとめます。", "output": "統一されたプロダクト体験" },
+      "guide": { "verb": "案内", "title": "顧客の価値実現を支援。", "copy": "コーディングエージェントが承認済みの手順で統合を実装・テスト。開発者がドキュメント、ダッシュボード、サポートチケットを行き来する必要はありません。", "output": "より速い統合" },
+      "learn": { "verb": "把握", "title": "顧客が成功する場所を把握。", "copy": "完了した実行ごとに明確な結果を確認し、プロダクトチームとカスタマーチームによる導入・サポートの改善につなげます。", "output": "明確な導入シグナル" }
+    }
+  },
+  "trust": {
+    "label": "信頼を前提に設計",
+    "title": "顧客を止めない安心を。",
+    "description": "開発者には速い道筋を提供しながら、プロダクト体験、機密アクセス、顧客の成果を管理下に保ちます。",
+    "learnMore": "DokoSoko のアクセス保護を見る",
+    "pillars": {
+      "reliable": { "label": "確実", "title": "顧客体験を守る。", "copy": "顧客はあなたが管理するプロダクトガイダンスに従うため、一貫性のない実装や回避可能な障害を減らせます。", "detail": "価値へつながる一貫した道筋" },
+      "safe": { "label": "安全", "title": "管理を失わず、より速く。", "copy": "機密アクセスを保護し、承認された設定操作だけを実行。スピードが不要なリスクを生むことはありません。", "detail": "保護されたアクセスと承認済みの設定" },
+      "visible": { "label": "可視化", "title": "何が機能しているかを把握。", "copy": "完了した実行ごとに明確な結果を確認し、プロダクトチームとカスタマーチームが導入状況をより正確に把握できます。", "detail": "明確な統合結果" }
+    }
+  },
+  "closing": {
+    "label": "統合をプロダクトの強みに",
+    "title": "開発者の関心を、導入成功へ。",
+    "description": "最初のプロンプトから最初の価値まで、すべての顧客により速くシンプルな道筋を提供します。",
+    "getStarted": "始める"
+  },
+  "footer": {
+    "tagline": "ソフトウェアプロダクトが開発者の関心を導入成功へ変えるお手伝いをします。",
+    "documentation": "ドキュメント", "security": "セキュリティ", "github": "GitHub"
+  }
+}

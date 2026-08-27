@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "DokoSoko — Ihr Produkt nur einen Prompt entfernt",
+    "description": "Helfen Sie Entwicklern, Ihr Produkt schneller zu integrieren – mit einem eindeutigen, autorisierten Weg vom Prompt bis zur funktionierenden Implementierung.",
+    "socialDescription": "Ein schnellerer, einfacherer Weg von der Absicht des Entwicklers zur funktionierenden Integration.",
+    "imageAlt": "DokoSoko — Ihr Produkt nur einen Prompt entfernt."
+  },
+  "redirect": {
+    "message": "Wir wählen die passende Sprache für Sie aus…",
+    "fallback": "Auf Englisch fortfahren"
+  },
+  "title": { "main": "DokoSoko" },
+  "language": {
+    "label": "Sprache",
+    "options": {
+      "en": "English", "es": "Español", "fr": "Français", "de": "Deutsch", "ja": "日本語", "uk": "Українська", "ptBR": "Português (Brasil)"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Zum Inhalt springen",
+    "home": "DokoSoko-Startseite",
+    "mainNavigation": "Hauptnavigation",
+    "footerNavigation": "Fußzeilennavigation"
+  },
+  "navigation": {
+    "why": "Warum DokoSoko", "how": "So funktioniert es", "trust": "Vertrauen", "getStarted": "Loslegen"
+  },
+  "agents": { "claude": "Claude", "codex": "Codex", "cursor": "Cursor", "opencode": "OpenCode" },
+  "diagram": {
+    "surfaces": { "docs": "Dokumentation", "apis": "APIs", "sdks": "SDKs", "packages": "Pakete", "recipes": "Anleitungen" },
+    "secureAccess": "Sicherer Zugriff",
+    "mcp": "DokoSoko MCP",
+    "caption": "DokoSoko bündelt alles, was ein Entwickler zur Integration Ihres Produkts benötigt, in einem sicheren Weg für den bereits verwendeten Coding-Agenten."
+  },
+  "hero": {
+    "titleMain": "Bringen Sie Ihr Produkt",
+    "titleEmphasis": "nur einen Prompt entfernt.",
+    "description": "Helfen Sie Entwicklern, schneller zu einer funktionierenden Integration zu gelangen. DokoSoko gibt Coding-Agenten einen eindeutigen, autorisierten Weg durch Ihr Produkt – für weniger Suchen, weniger Raten und weniger Wiederholungsversuche.",
+    "journeyLink": "Kundenreise ansehen"
+  },
+  "outcomes": {
+    "label": "Warum DokoSoko",
+    "title": "Schnellere Einführung. Weniger Reibung. Mehr Kunden, die Nutzen erzielen.",
+    "description": "DokoSoko beseitigt die Integrationshürden zwischen der Entscheidung für Ihr Produkt und dem tatsächlichen Nutzen.",
+    "items": {
+      "speed": { "label": "Tempo", "title": "Bringen Sie Kunden schneller zum Nutzen.", "copy": "Verkürzen Sie die Zeit zwischen der Entscheidung für Ihr Produkt und dem messbaren Nutzen im Unternehmen des Kunden." },
+      "simplicity": { "label": "Einfachheit", "title": "Machen Sie die Einführung mühelos.", "copy": "Beseitigen Sie Integrationshürden, die Evaluierungen verlangsamen, Einführungen verzögern und vermeidbaren Supportaufwand verursachen." },
+      "success": { "label": "Erfolg", "title": "Verwandeln Sie mehr Interesse in Nutzung.", "copy": "Helfen Sie mehr Entwicklern, die Integration abzuschließen, damit mehr Interessenten zu aktiven, erfolgreichen Kunden werden." }
+    }
+  },
+  "runSection": {
+    "label": "Integrationserfolg",
+    "title": "Ein klarer Weg von der Kundenabsicht zum bestätigten Ergebnis.",
+    "description": "Entwickler behalten ihren bevorzugten Coding-Agenten. DokoSoko stellt Ihre freigegebenen Anleitungen bereit, prüft erlaubte Einrichtungsschritte und erfasst das Ergebnis, sobald es bestätigt ist."
+  },
+  "runDemo": {
+    "eyebrow": "Beispielhafte Customer Journey",
+    "title": "Vom Kundenziel zum bestätigten Ergebnis",
+    "agentPickerAria": "Unterstützten Coding-Agenten auswählen",
+    "agentPickerLabel": "Coding-Agent des Entwicklers",
+    "customerGoalAria": "Kundenziel",
+    "customerGoalLabel": "Kundenziel",
+    "requestedOutcome": "Die erste Live-Anfrage in unserer Anwendung erfolgreich ausführen.",
+    "context": {
+      "agentLabel": "Coding-Agent", "stageLabel": "Kundenphase", "stageValue": "Neue Integration", "targetLabel": "Ziel", "targetValue": "Erste erfolgreiche Nutzung"
+    },
+    "traceAria": "Beispielhafter Ausführungsverlauf",
+    "trace": {
+      "understand": { "label": "Verstehen", "detail": "nutzt die von Ihrem Team freigegebenen Produktanleitungen" },
+      "build": { "label": "Erstellen", "detail": "schreibt und testet die Integration in der Anwendung des Kunden" },
+      "checkAccess": { "label": "Zugriff prüfen", "detail": "prüft erlaubte Einrichtungsschritte vor ihrer Ausführung" },
+      "confirm": { "label": "Bestätigen", "detail": "erfasst das Ergebnis, sobald Nachweise vorliegen" }
+    },
+    "result": {
+      "aria": "Beispiel für ein erfolgreiches Kundenergebnis",
+      "label": "Beispielergebnis",
+      "status": "Erfolg bestätigt",
+      "description": "Von Ihrem Team kontrollierte Nachweise haben das angeforderte Ergebnis bestätigt.",
+      "items": { "outcome": "Angefordertes Ergebnis bestätigt", "access": "Zugriffsprüfungen erfasst", "sensitive": "Sensible Werte ausgeschlossen" }
+    },
+    "caption": "Der Coding-Agent schreibt und testet die Integration. DokoSoko stellt den freigegebenen Weg bereit, prüft erlaubte Aktionen und erfasst das vom Aufrufer gemeldete Ergebnis."
+  },
+  "workflow": {
+    "label": "So funktioniert es",
+    "title": "Machen Sie die einfachste Integration zur ersten Wahl Ihrer Kunden.",
+    "description": "Geben Sie jedem Entwickler einen klaren Weg vom ersten Interesse bis zur erfolgreichen Nutzung – ohne zusätzlichen Aufwand für Ihr Team.",
+    "resultLabel": "Ergebnis",
+    "steps": {
+      "publish": { "verb": "Veröffentlichen", "title": "Machen Sie Ihr Produkt leicht einführbar.", "copy": "Bündeln Sie die benötigten Anleitungen und Einrichtungsschritte in einer Erfahrung, der der Coding-Agent des Kunden folgen kann.", "output": "Eine einheitliche Produkterfahrung" },
+      "guide": { "verb": "Anleiten", "title": "Helfen Sie Kunden, Nutzen zu erzielen.", "copy": "Der Coding-Agent folgt Ihrem freigegebenen Weg, um die Integration zu schreiben und zu testen, ohne Entwickler zwischen Dokumentation, Dashboards und Supporttickets hin- und herzuschicken.", "output": "Eine schnellere Integration" },
+      "learn": { "verb": "Lernen", "title": "Erkennen Sie, wo Kunden erfolgreich sind.", "copy": "Sehen Sie für jede abgeschlossene Ausführung ein klares Ergebnis, damit Produkt- und Kundenteams Einführung und Support verbessern können.", "output": "Klare Einführungssignale" }
+    }
+  },
+  "trust": {
+    "label": "Für Vertrauen entwickelt",
+    "title": "Sicherheit, ohne Kunden auszubremsen.",
+    "description": "Geben Sie Entwicklern einen schnellen Weg und behalten Sie gleichzeitig Produkterfahrung, sensible Zugriffe und Kundenergebnisse unter Kontrolle.",
+    "learnMore": "So schützt DokoSoko den Zugriff",
+    "pillars": {
+      "reliable": { "label": "Zuverlässig", "title": "Schützen Sie die Kundenerfahrung.", "copy": "Kunden folgen den von Ihnen kontrollierten Produktanleitungen. Das reduziert inkonsistente Implementierungen und vermeidbare Ausfälle.", "detail": "Ein konsistenter Weg zum Nutzen" },
+      "safe": { "label": "Sicher", "title": "Arbeiten Sie schneller, ohne Kontrolle zu verlieren.", "copy": "Sensible Zugriffe bleiben geschützt und nur freigegebene Einrichtungsschritte können ausgeführt werden, damit Geschwindigkeit kein unnötiges Risiko erzeugt.", "detail": "Geschützter Zugriff und freigegebene Einrichtung" },
+      "visible": { "label": "Transparent", "title": "Wissen Sie, was funktioniert.", "copy": "Sehen Sie für jede abgeschlossene Ausführung ein klares Ergebnis und geben Sie Produkt- und Kundenteams einen besseren Überblick über die Einführung.", "detail": "Klare Integrationsergebnisse" }
+    }
+  },
+  "closing": {
+    "label": "Machen Sie Integration zum Produktvorteil",
+    "title": "Verwandeln Sie Entwicklerinteresse in erfolgreiche Einführung.",
+    "description": "Geben Sie jedem Kunden einen schnelleren, einfacheren Weg vom ersten Prompt zum ersten Nutzen.",
+    "getStarted": "Loslegen"
+  },
+  "footer": {
+    "tagline": "Wir helfen Softwareprodukten, Entwicklerinteresse in erfolgreiche Einführung zu verwandeln.",
+    "documentation": "Dokumentation", "security": "Sicherheit", "github": "GitHub"
+  }
+}

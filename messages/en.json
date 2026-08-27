@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "title": "DokoSoko — Make your product one prompt away",
+    "description": "Help developers integrate your product faster with one exact, authorized path from prompt to working implementation.",
+    "socialDescription": "A faster, simpler path from developer intent to a working integration.",
+    "imageAlt": "DokoSoko — Make your product one prompt away."
+  },
+  "redirect": {
+    "message": "Choosing the best language for you…",
+    "fallback": "Continue in English"
+  },
+  "title": {
+    "main": "DokoSoko"
+  },
+  "language": {
+    "label": "Language",
+    "options": {
+      "en": "English",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "ja": "日本語",
+      "uk": "Українська",
+      "ptBR": "Português (Brasil)"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "home": "DokoSoko home",
+    "mainNavigation": "Main navigation",
+    "footerNavigation": "Footer navigation"
+  },
+  "navigation": {
+    "why": "Why DokoSoko",
+    "how": "How it works",
+    "trust": "Trust",
+    "getStarted": "Get started"
+  },
+  "agents": {
+    "claude": "Claude",
+    "codex": "Codex",
+    "cursor": "Cursor",
+    "opencode": "OpenCode"
+  },
+  "diagram": {
+    "surfaces": {
+      "docs": "Docs",
+      "apis": "APIs",
+      "sdks": "SDKs",
+      "packages": "Packages",
+      "recipes": "Recipes"
+    },
+    "secureAccess": "Secure access",
+    "mcp": "DokoSoko MCP",
+    "caption": "DokoSoko turns everything a developer needs to integrate your product into one secure path for the coding agent they already use."
+  },
+  "hero": {
+    "titleMain": "Make your product",
+    "titleEmphasis": "one prompt away.",
+    "description": "Help developers reach a working integration faster. DokoSoko gives coding agents one exact, authorized path through your product—so integrating takes less searching, less guessing, and fewer retries.",
+    "journeyLink": "See the customer journey"
+  },
+  "outcomes": {
+    "label": "Why DokoSoko",
+    "title": "Faster adoption. Less friction. More customers getting value.",
+    "description": "DokoSoko removes the integration friction between choosing your product and getting value from it.",
+    "items": {
+      "speed": {
+        "label": "Speed",
+        "title": "Get customers to value faster.",
+        "copy": "Shorten the time between choosing your product and seeing it deliver value inside the customer’s business."
+      },
+      "simplicity": {
+        "label": "Simplicity",
+        "title": "Make adoption feel effortless.",
+        "copy": "Remove the integration friction that slows evaluations, delays launches, and creates avoidable support work."
+      },
+      "success": {
+        "label": "Success",
+        "title": "Turn more interest into usage.",
+        "copy": "Help more developers finish the integration, so more prospects become active, successful customers."
+      }
+    }
+  },
+  "runSection": {
+    "label": "Integration success",
+    "title": "A clear path from customer intent to a confirmed result.",
+    "description": "Developers keep the coding agent they prefer. DokoSoko supplies your approved guidance, checks permitted setup, and records the outcome once it is confirmed."
+  },
+  "runDemo": {
+    "eyebrow": "Illustrative customer journey",
+    "title": "From a customer goal to a confirmed result",
+    "agentPickerAria": "Select a supported coding agent",
+    "agentPickerLabel": "Developer’s coding agent",
+    "customerGoalAria": "Customer goal",
+    "customerGoalLabel": "Customer goal",
+    "requestedOutcome": "Get the first live request working inside our application.",
+    "context": {
+      "agentLabel": "Coding agent",
+      "stageLabel": "Customer stage",
+      "stageValue": "New integration",
+      "targetLabel": "Target",
+      "targetValue": "First successful use"
+    },
+    "traceAria": "Illustrative run trace",
+    "trace": {
+      "understand": {
+        "label": "Understand",
+        "detail": "uses the product guidance your team approved"
+      },
+      "build": {
+        "label": "Build",
+        "detail": "writes and tests the integration in the customer’s application"
+      },
+      "checkAccess": {
+        "label": "Check access",
+        "detail": "checks permitted setup actions before they run"
+      },
+      "confirm": {
+        "label": "Confirm",
+        "detail": "records the result when evidence is available"
+      }
+    },
+    "result": {
+      "aria": "Illustrative successful customer outcome",
+      "label": "Illustrative outcome",
+      "status": "Success confirmed",
+      "description": "Evidence controlled by your team confirmed the requested outcome.",
+      "items": {
+        "outcome": "Requested outcome confirmed",
+        "access": "Access checks recorded",
+        "sensitive": "Sensitive values excluded"
+      }
+    },
+    "caption": "The coding agent writes and tests the integration. DokoSoko supplies the approved path, checks permitted actions, and records the outcome reported by the caller."
+  },
+  "workflow": {
+    "label": "How it works",
+    "title": "Make the easiest integration the one customers choose.",
+    "description": "Give every developer a clear path from first interest to successful use—without adding more work for your team.",
+    "resultLabel": "Result",
+    "steps": {
+      "publish": {
+        "verb": "Publish",
+        "title": "Make your product easy to adopt.",
+        "copy": "Bring the guidance and setup customers need into one experience their coding agent can follow.",
+        "output": "One product experience"
+      },
+      "guide": {
+        "verb": "Guide",
+        "title": "Help customers get to value.",
+        "copy": "Their coding agent uses your approved path to write and test the integration without sending developers across documentation, dashboards, and support tickets.",
+        "output": "A faster integration"
+      },
+      "learn": {
+        "verb": "Learn",
+        "title": "See where customers succeed.",
+        "copy": "See a clear result for every completed run, so product and customer teams can improve adoption and support.",
+        "output": "Clear adoption signals"
+      }
+    }
+  },
+  "trust": {
+    "label": "Built for trust",
+    "title": "Confidence without slowing customers down.",
+    "description": "Give developers a fast path while keeping your product experience, sensitive access, and customer outcomes under control.",
+    "learnMore": "See how DokoSoko protects access",
+    "pillars": {
+      "reliable": {
+        "label": "Reliable",
+        "title": "Protect the customer experience.",
+        "copy": "Customers follow product guidance you control, reducing inconsistent implementations and avoidable breakage.",
+        "detail": "A consistent path to value"
+      },
+      "safe": {
+        "label": "Safe",
+        "title": "Move faster without losing control.",
+        "copy": "Sensitive access stays protected and only approved setup actions can run, so speed does not create unnecessary risk.",
+        "detail": "Protected access and approved setup"
+      },
+      "visible": {
+        "label": "Visible",
+        "title": "Know what is working.",
+        "copy": "See a clear result for every completed run, giving product and customer teams a clearer picture of adoption.",
+        "detail": "Clear integration outcomes"
+      }
+    }
+  },
+  "closing": {
+    "label": "Make integration a product advantage",
+    "title": "Turn developer interest into successful adoption.",
+    "description": "Give every customer a faster, simpler path from first prompt to first value.",
+    "getStarted": "Get started"
+  },
+  "footer": {
+    "tagline": "Helping software products turn developer interest into successful adoption.",
+    "documentation": "Documentation",
+    "security": "Security",
+    "github": "GitHub"
+  }
+}

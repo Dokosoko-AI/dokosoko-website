@@ -1,0 +1,247 @@
+import { useTranslations } from "next-intl";
+
+import { withBasePath } from "../../i18n/assets";
+import FlowParticle from "../flow-particle";
+import IntegrationRunDemo from "../integration-run-demo";
+import LanguageSelector from "../language-selector";
+
+const docsUrl = "/dokosoko-docs/";
+const productSetupUrl = `${docsUrl}guides/product-setup/`;
+const securityUrl = `${docsUrl}concepts/security/`;
+const githubUrl = "https://github.com/Dokosoko/dokosoko-service";
+
+const integrationSurfaces = ["docs", "apis", "sdks", "packages", "recipes"] as const;
+
+const codingAgents = [
+  { id: "claude", icon: withBasePath("/agents/claude.svg") },
+  { id: "codex", icon: withBasePath("/agents/codex.png") },
+  { id: "cursor", icon: withBasePath("/agents/cursor.svg") },
+  { id: "opencode", icon: withBasePath("/agents/opencode.svg") },
+] as const;
+
+const outcomes = ["speed", "simplicity", "success"] as const;
+const workflowSteps = ["publish", "guide", "learn"] as const;
+const trustPillars = ["reliable", "safe", "visible"] as const;
+
+function Brand({ compact = false }: { compact?: boolean }) {
+  const t = useTranslations();
+
+  return (
+    <span className={`brand${compact ? " brand-compact" : ""}`}>
+      {/* The static-exported SVG is already tiny; image optimization would add no value here. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={withBasePath("/favicon.svg")} width={compact ? 22 : 26} height={compact ? 22 : 26} alt="" />
+      <span>{t("title.main")}</span>
+    </span>
+  );
+}
+
+function Arrow() {
+  return <span className="arrow" aria-hidden="true">↗</span>;
+}
+
+function ConnectorSpinePreview() {
+  const t = useTranslations();
+
+  return (
+    <figure className="connector-hero">
+      <div className="connector-diagram" aria-hidden="true">
+        <div className="source-network">
+          <div className="stack-sources">
+            {integrationSurfaces.map((surface) => (
+              <div className="source-pill" key={surface}>
+                <strong>{t(`diagram.surfaces.${surface}`)}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flow-link" />
+
+        <div className="mcp-row">
+          <div className="credential-branch">
+            <span className="credential-lock">
+              {/* Lucide's lock-keyhole mark, stored locally for the static site. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={withBasePath("/lock-keyhole.svg")} alt="" width="18" height="18" />
+            </span>
+            <strong>{t("diagram.secureAccess")}</strong>
+          </div>
+
+          <div className="mcp-node">
+            {/* The official MCP mark is a tiny local static asset. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={withBasePath("/mcp.svg")} alt="" width="32" height="32" />
+            <strong>{t("diagram.mcp")}</strong>
+          </div>
+        </div>
+
+        <div className="flow-link" />
+
+        <div className="agent-outcome">
+          <div className="agent-logos">
+            {codingAgents.map((agent) => (
+              <div className="agent-logo" key={agent.id}>
+                {/* The local marks are tiny static assets; image optimization adds no value. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={agent.icon} alt="" width="26" height="26" />
+                <strong>{t(`agents.${agent.id}`)}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <FlowParticle />
+      </div>
+      <figcaption>{t("diagram.caption")}</figcaption>
+    </figure>
+  );
+}
+
+function Workflow() {
+  const t = useTranslations();
+
+  return (
+    <ol className="workflow-grid">
+      {workflowSteps.map((step, index) => (
+        <li key={step}>
+          <div className="workflow-index"><span>0{index + 1}</span><i aria-hidden="true" /></div>
+          <p className="workflow-verb">{t(`workflow.steps.${step}.verb`)}</p>
+          <h3>{t(`workflow.steps.${step}.title`)}</h3>
+          <p>{t(`workflow.steps.${step}.copy`)}</p>
+          <footer><span>{t("workflow.resultLabel")}</span><strong>{t(`workflow.steps.${step}.output`)}</strong></footer>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function OutcomePromises() {
+  const t = useTranslations();
+
+  return (
+    <section className="outcomes-section" id="outcomes" aria-labelledby="outcomes-title">
+      <div className="shell outcomes-head">
+        <div>
+          <p className="section-label">{t("outcomes.label")}</p>
+          <h2 id="outcomes-title">{t("outcomes.title")}</h2>
+        </div>
+        <p>{t("outcomes.description")}</p>
+      </div>
+      <ol className="shell outcomes-grid">
+        {outcomes.map((outcome, index) => (
+          <li key={outcome}>
+            <header><span>0{index + 1}</span><strong>{t(`outcomes.items.${outcome}.label`)}</strong></header>
+            <h3>{t(`outcomes.items.${outcome}.title`)}</h3>
+            <p>{t(`outcomes.items.${outcome}.copy`)}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+export default function Home() {
+  const t = useTranslations();
+
+  return (
+    <>
+      <a className="skip-link" href="#main-content">{t("accessibility.skipToContent")}</a>
+      <header className="site-header">
+        <div className="shell header-inner">
+          <a className="brand-link" href="#top" aria-label={t("accessibility.home")}><Brand /></a>
+          <nav className="site-nav" aria-label={t("accessibility.mainNavigation")}>
+            <a href="#outcomes">{t("navigation.why")}</a>
+            <a href="#workflow">{t("navigation.how")}</a>
+            <a href="#security">{t("navigation.trust")}</a>
+          </nav>
+          <LanguageSelector />
+          <a className="header-link" href={productSetupUrl}>{t("navigation.getStarted")} <span aria-hidden="true">→</span></a>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section className="hero" id="top">
+          <div className="shell hero-inner">
+            <div className="hero-layout">
+              <div className="hero-message">
+                <h1>{t("hero.titleMain")} <em>{t("hero.titleEmphasis")}</em></h1>
+                <p>{t("hero.description")}</p>
+                <a className="text-link" href="#run">{t("hero.journeyLink")} <Arrow /></a>
+              </div>
+              <ConnectorSpinePreview />
+            </div>
+          </div>
+        </section>
+
+        <OutcomePromises />
+
+        <section className="run-section section" id="run">
+          <div className="shell section-intro run-intro">
+            <p className="section-label">{t("runSection.label")}</p>
+            <div>
+              <h2>{t("runSection.title")}</h2>
+              <p>{t("runSection.description")}</p>
+            </div>
+          </div>
+          <div className="shell"><IntegrationRunDemo /></div>
+        </section>
+
+        <section className="workflow-section section" id="workflow">
+          <div className="shell section-intro">
+            <p className="section-label">{t("workflow.label")}</p>
+            <div>
+              <h2>{t("workflow.title")}</h2>
+              <p>{t("workflow.description")}</p>
+            </div>
+          </div>
+          <div className="shell"><Workflow /></div>
+        </section>
+
+        <section className="trust-section section" id="security">
+          <div className="shell trust-head">
+            <p className="section-label">{t("trust.label")}</p>
+            <div>
+              <h2>{t("trust.title")}</h2>
+              <p>{t("trust.description")}</p>
+            </div>
+          </div>
+          <div className="shell trust-grid">
+            {trustPillars.map((pillar, index) => (
+              <article key={pillar}>
+                <header><span>0{index + 1}</span><strong>{t(`trust.pillars.${pillar}.label`)}</strong></header>
+                <h3>{t(`trust.pillars.${pillar}.title`)}</h3>
+                <p>{t(`trust.pillars.${pillar}.copy`)}</p>
+                <p className="trust-detail">{t(`trust.pillars.${pillar}.detail`)}</p>
+              </article>
+            ))}
+          </div>
+          <div className="shell trust-action">
+            <a className="text-link light" href={securityUrl}>{t("trust.learnMore")} <Arrow /></a>
+          </div>
+        </section>
+
+        <section className="closing-section">
+          <div className="shell closing-content">
+            <p className="section-label">{t("closing.label")}</p>
+            <h2>{t("closing.title")}</h2>
+            <p>{t("closing.description")}</p>
+            <a className="button button-light" href={productSetupUrl}>{t("closing.getStarted")} <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="shell footer-grid">
+          <a className="brand-link" href="#top" aria-label={t("accessibility.home")}><Brand compact /></a>
+          <p>{t("footer.tagline")}</p>
+          <nav aria-label={t("accessibility.footerNavigation")}>
+            <a href={docsUrl}>{t("footer.documentation")}</a>
+            <a href={securityUrl}>{t("footer.security")}</a>
+            <a href={githubUrl} target="_blank" rel="noreferrer">{t("footer.github")} <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+      </footer>
+    </>
+  );
+}

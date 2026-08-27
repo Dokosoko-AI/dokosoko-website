@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "title": "DokoSoko — Tu producto, a un prompt de distancia",
+    "description": "Ayuda a los desarrolladores a integrar tu producto más rápido con una ruta exacta y autorizada desde el prompt hasta una implementación funcional.",
+    "socialDescription": "Una ruta más rápida y sencilla desde la intención del desarrollador hasta una integración funcional.",
+    "imageAlt": "DokoSoko — Tu producto, a un prompt de distancia."
+  },
+  "redirect": {
+    "message": "Estamos eligiendo el mejor idioma para ti…",
+    "fallback": "Continuar en inglés"
+  },
+  "title": { "main": "DokoSoko" },
+  "language": {
+    "label": "Idioma",
+    "options": {
+      "en": "English", "es": "Español", "fr": "Français", "de": "Deutsch", "ja": "日本語", "uk": "Українська", "ptBR": "Português (Brasil)"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido",
+    "home": "Inicio de DokoSoko",
+    "mainNavigation": "Navegación principal",
+    "footerNavigation": "Navegación del pie de página"
+  },
+  "navigation": {
+    "why": "Por qué DokoSoko", "how": "Cómo funciona", "trust": "Confianza", "getStarted": "Comenzar"
+  },
+  "agents": { "claude": "Claude", "codex": "Codex", "cursor": "Cursor", "opencode": "OpenCode" },
+  "diagram": {
+    "surfaces": { "docs": "Documentación", "apis": "API", "sdks": "SDK", "packages": "Paquetes", "recipes": "Recetas" },
+    "secureAccess": "Acceso seguro",
+    "mcp": "MCP de DokoSoko",
+    "caption": "DokoSoko convierte todo lo que un desarrollador necesita para integrar tu producto en una única ruta segura para el agente de programación que ya utiliza."
+  },
+  "hero": {
+    "titleMain": "Pon tu producto",
+    "titleEmphasis": "a un prompt de distancia.",
+    "description": "Ayuda a los desarrolladores a conseguir antes una integración funcional. DokoSoko ofrece a los agentes de programación una ruta exacta y autorizada por tu producto, para que integrar requiera menos búsquedas, menos suposiciones y menos reintentos.",
+    "journeyLink": "Ver el recorrido del cliente"
+  },
+  "outcomes": {
+    "label": "Por qué DokoSoko",
+    "title": "Adopción más rápida. Menos fricción. Más clientes obteniendo valor.",
+    "description": "DokoSoko elimina la fricción de integración entre elegir tu producto y obtener valor de él.",
+    "items": {
+      "speed": {
+        "label": "Velocidad", "title": "Haz que tus clientes obtengan valor antes.", "copy": "Reduce el tiempo entre elegir tu producto y verlo aportar valor dentro del negocio del cliente."
+      },
+      "simplicity": {
+        "label": "Simplicidad", "title": "Haz que la adopción parezca sencilla.", "copy": "Elimina la fricción de integración que ralentiza las evaluaciones, retrasa los lanzamientos y genera trabajo de soporte evitable."
+      },
+      "success": {
+        "label": "Éxito", "title": "Convierte más interés en uso.", "copy": "Ayuda a más desarrolladores a completar la integración para que más clientes potenciales se conviertan en clientes activos y satisfechos."
+      }
+    }
+  },
+  "runSection": {
+    "label": "Éxito de la integración",
+    "title": "Una ruta clara desde la intención del cliente hasta un resultado confirmado.",
+    "description": "Los desarrolladores conservan el agente de programación que prefieren. DokoSoko aporta tus instrucciones aprobadas, comprueba la configuración permitida y registra el resultado cuando se confirma."
+  },
+  "runDemo": {
+    "eyebrow": "Ejemplo del recorrido del cliente",
+    "title": "Del objetivo del cliente a un resultado confirmado",
+    "agentPickerAria": "Seleccionar un agente de programación compatible",
+    "agentPickerLabel": "Agente de programación del desarrollador",
+    "customerGoalAria": "Objetivo del cliente",
+    "customerGoalLabel": "Objetivo del cliente",
+    "requestedOutcome": "Hacer funcionar la primera solicitud real dentro de nuestra aplicación.",
+    "context": {
+      "agentLabel": "Agente de programación", "stageLabel": "Etapa del cliente", "stageValue": "Nueva integración", "targetLabel": "Objetivo", "targetValue": "Primer uso satisfactorio"
+    },
+    "traceAria": "Traza de ejecución ilustrativa",
+    "trace": {
+      "understand": { "label": "Comprender", "detail": "usa las instrucciones del producto aprobadas por tu equipo" },
+      "build": { "label": "Crear", "detail": "escribe y prueba la integración en la aplicación del cliente" },
+      "checkAccess": { "label": "Comprobar acceso", "detail": "comprueba las acciones de configuración permitidas antes de ejecutarlas" },
+      "confirm": { "label": "Confirmar", "detail": "registra el resultado cuando hay pruebas disponibles" }
+    },
+    "result": {
+      "aria": "Ejemplo de resultado satisfactorio del cliente",
+      "label": "Resultado ilustrativo",
+      "status": "Éxito confirmado",
+      "description": "Las pruebas controladas por tu equipo confirmaron el resultado solicitado.",
+      "items": { "outcome": "Resultado solicitado confirmado", "access": "Comprobaciones de acceso registradas", "sensitive": "Valores sensibles excluidos" }
+    },
+    "caption": "El agente de programación escribe y prueba la integración. DokoSoko proporciona la ruta aprobada, comprueba las acciones permitidas y registra el resultado comunicado por quien realiza la llamada."
+  },
+  "workflow": {
+    "label": "Cómo funciona",
+    "title": "Haz que la integración más fácil sea la que elijan los clientes.",
+    "description": "Ofrece a cada desarrollador una ruta clara desde el primer interés hasta el uso satisfactorio, sin añadir más trabajo a tu equipo.",
+    "resultLabel": "Resultado",
+    "steps": {
+      "publish": { "verb": "Publica", "title": "Haz que tu producto sea fácil de adoptar.", "copy": "Reúne las instrucciones y la configuración que necesitan los clientes en una experiencia que su agente de programación pueda seguir.", "output": "Una experiencia de producto" },
+      "guide": { "verb": "Guía", "title": "Ayuda a los clientes a obtener valor.", "copy": "Su agente de programación utiliza tu ruta aprobada para escribir y probar la integración sin enviar a los desarrolladores de la documentación a los paneles y los tickets de soporte.", "output": "Una integración más rápida" },
+      "learn": { "verb": "Aprende", "title": "Descubre dónde tienen éxito los clientes.", "copy": "Consulta un resultado claro para cada ejecución completada y ayuda a los equipos de producto y atención al cliente a mejorar la adopción y el soporte.", "output": "Señales claras de adopción" }
+    }
+  },
+  "trust": {
+    "label": "Diseñado para generar confianza",
+    "title": "Confianza sin ralentizar a los clientes.",
+    "description": "Ofrece a los desarrolladores una ruta rápida mientras mantienes bajo control la experiencia del producto, el acceso sensible y los resultados de los clientes.",
+    "learnMore": "Descubre cómo protege DokoSoko el acceso",
+    "pillars": {
+      "reliable": { "label": "Fiable", "title": "Protege la experiencia del cliente.", "copy": "Los clientes siguen las instrucciones del producto que tú controlas, lo que reduce las implementaciones incoherentes y los fallos evitables.", "detail": "Una ruta coherente hacia el valor" },
+      "safe": { "label": "Seguro", "title": "Avanza más rápido sin perder el control.", "copy": "El acceso sensible permanece protegido y solo pueden ejecutarse acciones de configuración aprobadas, para que la velocidad no genere riesgos innecesarios.", "detail": "Acceso protegido y configuración aprobada" },
+      "visible": { "label": "Visible", "title": "Conoce lo que funciona.", "copy": "Consulta un resultado claro para cada ejecución completada y ofrece a los equipos de producto y atención al cliente una visión más clara de la adopción.", "detail": "Resultados de integración claros" }
+    }
+  },
+  "closing": {
+    "label": "Convierte la integración en una ventaja del producto",
+    "title": "Convierte el interés de los desarrolladores en una adopción satisfactoria.",
+    "description": "Ofrece a cada cliente una ruta más rápida y sencilla desde el primer prompt hasta el primer valor.",
+    "getStarted": "Comenzar"
+  },
+  "footer": {
+    "tagline": "Ayudamos a los productos de software a convertir el interés de los desarrolladores en una adopción satisfactoria.",
+    "documentation": "Documentación", "security": "Seguridad", "github": "GitHub"
+  }
+}
